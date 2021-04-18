@@ -25,7 +25,6 @@ Type `.poto` for get **All profile pics of that User**
 \nOr type `.poto (number)` to get the **desired number of photo of a User** .
 """
 
-
 name = "Profile Photos"
 
 

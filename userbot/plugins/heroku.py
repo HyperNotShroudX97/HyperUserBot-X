@@ -200,9 +200,9 @@ async def _(dyno):
     data = app.get_log()
     key = (
         requests.post("https://nekobin.com/api/documents", json={"content": data})
-        .json()
-        .get("result")
-        .get("key")
+            .json()
+            .get("result")
+            .get("key")
     )
     url = f"https://nekobin.com/{key}"
     reply_text = f"Recent 100 lines of heroku logs: [here]({url})"

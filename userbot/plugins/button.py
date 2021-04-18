@@ -39,7 +39,7 @@ async def _(event):
         if n_escapes % 2 == 0:
             # create a thruple with button label, url, and newline status
             buttons.append((match.group(2), match.group(3), bool(match.group(4))))
-            note_data += markdown_note[prev : match.start(1)]
+            note_data += markdown_note[prev: match.start(1)]
             prev = match.end(1)
         # if odd, escaped -> move along
         elif n_escapes % 2 == 1:

@@ -41,13 +41,13 @@ async def lst(event):
                 if str(contents).endswith((".opus")):
                     files += "🎙" + f"`{contents}`\n"
                 elif str(contents).endswith(
-                    (".mkv", ".mp4", ".webm", ".avi", ".mov", ".flv")
+                        (".mkv", ".mp4", ".webm", ".avi", ".mov", ".flv")
                 ):
                     files += "🎞" + f"`{contents}`\n"
                 elif str(contents).endswith((".zip", ".tar", ".tar.gz", ".rar")):
                     files += "🗜" + f"`{contents}`\n"
                 elif str(contents).endswith(
-                    (".jpg", ".jpeg", ".png", ".gif", ".bmp", ".ico")
+                        (".jpg", ".jpeg", ".png", ".gif", ".bmp", ".ico")
                 ):
                     files += "🖼" + f"`{contents}`\n"
                 else:

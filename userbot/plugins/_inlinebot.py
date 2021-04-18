@@ -78,7 +78,7 @@ if Config.TG_BOT_USERNAME is not None and tgbot is not None:
                     buttons.append(
                         (match.group(2), match.group(3), bool(match.group(4)))
                     )
-                    note_data += markdown_note[prev : match.start(1)]
+                    note_data += markdown_note[prev: match.start(1)]
                     prev = match.end(1)
                 # if odd, escaped -> move along
                 elif n_escapes % 2 == 1:
@@ -149,6 +149,7 @@ if Config.TG_BOT_USERNAME is not None and tgbot is not None:
             else:
                 json.dump(newsecret, open(secret, "w"))
 
+
     @tgbot.on(
         events.callbackquery.CallbackQuery(  # pylint:disable=E0602
             data=re.compile(rb"helpme_next\((.+?)\)")
@@ -163,6 +164,7 @@ if Config.TG_BOT_USERNAME is not None and tgbot is not None:
         else:
             reply_pop_up_alert = "Please get your own catuserbot, and don't use mine! Join @catuserbot17 help"
             await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
+
 
     @tgbot.on(
         events.callbackquery.CallbackQuery(  # pylint:disable=E0602
@@ -180,6 +182,7 @@ if Config.TG_BOT_USERNAME is not None and tgbot is not None:
         else:
             reply_pop_up_alert = "Please get your own catuserbot, and don't use mine! Join @catuserbot17 help "
             await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
+
 
     @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"secret_(.*)")))
     async def on_plug_in_callback_query_handler(event):
@@ -200,6 +203,7 @@ if Config.TG_BOT_USERNAME is not None and tgbot is not None:
         else:
             reply_pop_up_alert = "This message no longer exists "
         await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
+
 
     @tgbot.on(
         events.callbackquery.CallbackQuery(  # pylint:disable=E0602
@@ -240,6 +244,7 @@ if Config.TG_BOT_USERNAME is not None and tgbot is not None:
             reply_pop_up_alert = "Please get your own catuserbot, and don't use mine! Join @catuserbot17 help "
             await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
+
     @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"close")))
     async def on_plug_in_callback_query_handler(event):
         if event.query.user_id == bot.uid:
@@ -247,6 +252,7 @@ if Config.TG_BOT_USERNAME is not None and tgbot is not None:
         else:
             reply_pop_up_alert = "Please get your own catuserbot, and don't use mine! Join @catuserbot17 help "
             await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
+
 
     @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"stats")))
     async def on_plug_in_callback_query_handler(event):
@@ -289,18 +295,18 @@ def paginate_help(page_number, loaded_plugins, prefix):
     modulo_page = page_number % max_num_pages
     if len(pairs) > number_of_rows:
         pairs = pairs[
-            modulo_page * number_of_rows : number_of_rows * (modulo_page + 1)
-        ] + [
-            (
-                custom.Button.inline(
-                    "⌫", data="{}_prev({})".format(prefix, modulo_page)
-                ),
-                custom.Button.inline("Close", data="close"),
-                custom.Button.inline(
-                    "⌦", data="{}_next({})".format(prefix, modulo_page)
-                ),
-            )
-        ]
+                modulo_page * number_of_rows: number_of_rows * (modulo_page + 1)
+                ] + [
+                    (
+                        custom.Button.inline(
+                            "⌫", data="{}_prev({})".format(prefix, modulo_page)
+                        ),
+                        custom.Button.inline("Close", data="close"),
+                        custom.Button.inline(
+                            "⌦", data="{}_next({})".format(prefix, modulo_page)
+                        ),
+                    )
+                ]
     return pairs
 
 

@@ -87,7 +87,7 @@ async def time_func(tdata):
             return_str = f"`{c_name} has multiple timezones:`\n\n"
 
             for i, item in enumerate(timezones):
-                return_str += f"`{i+1}. {item}`\n"
+                return_str += f"`{i + 1}. {item}`\n"
 
             return_str += "\n`Choose one by typing the number "
             return_str += "in the command.`\n"

@@ -104,18 +104,18 @@ async def _(event):
         data = message
         key = (
             requests.post("https://nekobin.com/api/documents", json={"content": data})
-            .json()
-            .get("result")
-            .get("key")
+                .json()
+                .get("result")
+                .get("key")
         )
         url = f"https://nekobin.com/{key}{py_file}"
     else:
         data = message
         key = (
             requests.post("https://nekobin.com/api/documents", json={"content": data})
-            .json()
-            .get("result")
-            .get("key")
+                .json()
+                .get("result")
+                .get("key")
         )
         url = f"https://nekobin.com/{key}"
     reply_text = f"**Pasted to Nekobin : **[neko]({url})\n**Raw url : **[Raw](https://nekobin.com/raw/{key})"
@@ -176,11 +176,11 @@ async def get_dogbin_content(dog_url):
     format_view = "https://del.dog/v/"
 
     if message.startswith(format_view):
-        message = message[len(format_view) :]
+        message = message[len(format_view):]
     elif message.startswith(format_normal):
-        message = message[len(format_normal) :]
+        message = message[len(format_normal):]
     elif message.startswith("del.dog/"):
-        message = message[len("del.dog/") :]
+        message = message[len("del.dog/"):]
     else:
         await catevent.edit("`Is that even a dogbin url?`")
         return
@@ -202,7 +202,7 @@ async def get_dogbin_content(dog_url):
         )
         return
     reply_text = (
-        "`Fetched dogbin URL content successfully!`\n\n`Content:` \n" + resp.text
+            "`Fetched dogbin URL content successfully!`\n\n`Content:` \n" + resp.text
     )
     await edit_or_reply(catevent, reply_text)
 

@@ -12,7 +12,7 @@ OCR_SPACE_API_KEY = Config.OCR_SPACE_API_KEY
 
 
 async def ocr_space_file(
-    filename, overlay=False, api_key=OCR_SPACE_API_KEY, language="eng"
+        filename, overlay=False, api_key=OCR_SPACE_API_KEY, language="eng"
 ):
     """OCR.space API request with local file.
         Python3.5 - not tested on 2.7

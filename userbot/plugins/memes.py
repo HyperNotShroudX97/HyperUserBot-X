@@ -298,7 +298,7 @@ async def gbun(event):
     await asyncio.sleep(3.5)
     chat = await event.get_input_chat()
     async for _ in event.client.iter_participants(
-        chat, filter=ChannelParticipantsAdmins
+            chat, filter=ChannelParticipantsAdmins
     ):
         mentions += f""
     reply_message = None

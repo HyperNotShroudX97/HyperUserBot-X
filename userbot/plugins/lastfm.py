@@ -45,6 +45,8 @@ LFM_LOG_ENABLED = "```last.fm logging to bot log is now enabled.```"
 LFM_LOG_DISABLED = "```last.fm logging to bot log is now disabled.```"
 LFM_LOG_ERR = "```No option specified.```"
 ERROR_MSG = "```last.fm module halted, got an unexpected error.```"
+
+
 # ================================================
 
 
@@ -137,9 +139,9 @@ async def get_curr_track(lfmbio):
             oldsong = environ.get("oldsong", None)
             oldartist = environ.get("oldartist", None)
             if (
-                playing is not None
-                and LASTFM_.SONG != oldsong
-                and LASTFM_.ARTIST != oldartist
+                    playing is not None
+                    and LASTFM_.SONG != oldsong
+                    and LASTFM_.ARTIST != oldartist
             ):
                 environ["oldsong"] = str(LASTFM_.SONG)
                 environ["oldartist"] = str(LASTFM_.ARTIST)

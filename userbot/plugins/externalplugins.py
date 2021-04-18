@@ -3,8 +3,8 @@ from pathlib import Path
 
 from telethon.tl.types import InputMessagesFilterDocument
 
-from ..utils import load_module
 from . import BOTLOG, BOTLOG_CHATID
+from ..utils import load_module
 
 if Config.PLUGIN_CHANNEL:
 
@@ -30,5 +30,6 @@ if Config.PLUGIN_CHANNEL:
                     BOTLOG_CHATID,
                     f"Installed Plugin `{os.path.basename(downloaded_file_name)}` successfully.",
                 )
+
 
     bot.loop.create_task(install())

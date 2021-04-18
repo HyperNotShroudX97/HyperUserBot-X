@@ -5,8 +5,6 @@ from distutils.util import strtobool as sb
 from logging import DEBUG, INFO, basicConfig, getLogger
 
 import heroku3
-from dotenv import load_dotenv
-from requests import get
 from telethon import TelegramClient
 from telethon.sessions import StringSession
 
@@ -14,7 +12,6 @@ from .Config import Config
 
 StartTime = time.time()
 catversion = "2.10.6"
-
 
 CAT_ID = ["1035034432", "551290198"]
 
@@ -32,7 +29,6 @@ else:
         datefmt="%m-%d %H:%M:%S",
     )
 LOGS = getLogger(__name__)
-
 
 try:
     if Config.HEROKU_API_KEY is not None or Config.HEROKU_APP_NAME is not None:

@@ -21,9 +21,9 @@ from telethon.tl.functions.channels import (
 from telethon.tl.functions.users import GetFullUserRequest
 from telethon.tl.types import ChatAdminRights, ChatBannedRights, MessageMediaPhoto
 
-from ..utils import errors_handler
 from . import BOTLOG, BOTLOG_CHATID, LOGS, get_user_from_event
 from .sql_helper.mute_sql import is_muted, mute, unmute
+from ..utils import errors_handler
 
 # =================== CONSTANT ===================
 
@@ -59,6 +59,7 @@ UNBAN_RIGHTS = ChatBannedRights(
 
 MUTE_RIGHTS = ChatBannedRights(until_date=None, send_messages=True)
 UNMUTE_RIGHTS = ChatBannedRights(until_date=None, send_messages=False)
+
 
 # ================================================
 
@@ -228,11 +229,11 @@ async def ban(bon):
         return
     if reason:
         await catevent.edit(
-            f"{_format.mentionuser(user.first_name ,user.id)}` is banned !!`\n**Reason : **`{reason}`"
+            f"{_format.mentionuser(user.first_name, user.id)}` is banned !!`\n**Reason : **`{reason}`"
         )
     else:
         await catevent.edit(
-            f"{_format.mentionuser(user.first_name ,user.id)} `is banned !!`"
+            f"{_format.mentionuser(user.first_name, user.id)} `is banned !!`"
         )
     if BOTLOG:
         await bon.client.send_message(
@@ -266,7 +267,7 @@ async def nothanos(unbon):
     try:
         await unbon.client(EditBannedRequest(unbon.chat_id, user.id, UNBAN_RIGHTS))
         await catevent.edit(
-            f"{_format.mentionuser(user.first_name ,user.id)} `is Unbanned Successfully. Granting another chance.`"
+            f"{_format.mentionuser(user.first_name, user.id)} `is Unbanned Successfully. Granting another chance.`"
         )
         if BOTLOG:
             await unbon.client.send_message(
@@ -369,13 +370,13 @@ async def startmute(event):
         if reason:
             await edit_or_reply(
                 event,
-                f"{_format.mentionuser(user.first_name ,user.id)} `is muted in {event.chat.title}`\n"
+                f"{_format.mentionuser(user.first_name, user.id)} `is muted in {event.chat.title}`\n"
                 f"`Reason:`{reason}",
             )
         else:
             await edit_or_reply(
                 event,
-                f"{_format.mentionuser(user.first_name ,user.id)} `is muted in {event.chat.title}`\n",
+                f"{_format.mentionuser(user.first_name, user.id)} `is muted in {event.chat.title}`\n",
             )
         if BOTLOG:
             await event.client.send_message(
@@ -443,7 +444,7 @@ async def endmute(event):
             return await edit_or_reply(event, f"**Error : **`{str(e)}`")
         await edit_or_reply(
             event,
-            f"{_format.mentionuser(user.first_name ,user.id)} `is unmuted in {event.chat.title}\n乁( ◔ ౪◔)「    ┑(￣Д ￣)┍`",
+            f"{_format.mentionuser(user.first_name, user.id)} `is unmuted in {event.chat.title}\n乁( ◔ ౪◔)「    ┑(￣Д ￣)┍`",
         )
         if BOTLOG:
             await event.client.send_message(

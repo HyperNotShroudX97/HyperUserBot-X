@@ -15,7 +15,6 @@ from telethon.tl.functions.users import GetFullUserRequest
 from telethon.tl.types import ChatBannedRights
 
 import userbot.plugins.sql_helper.gban_sql_helper as gban_sql
-
 from . import BOTLOG, BOTLOG_CHATID, CAT_ID, admin_groups, get_user_from_event
 from .sql_helper.mute_sql import is_muted, mute, unmute
 
@@ -248,7 +247,7 @@ async def startgmute(event):
     if is_muted(userid, "gmute"):
         return await edit_or_reply(
             event,
-            f"{_format.mentionuser(user.first_name ,user.id)} ` is already gmuted`",
+            f"{_format.mentionuser(user.first_name, user.id)} ` is already gmuted`",
         )
     try:
         mute(userid, "gmute")
@@ -258,12 +257,12 @@ async def startgmute(event):
         if reason:
             await edit_or_reply(
                 event,
-                f"{_format.mentionuser(user.first_name ,user.id)} `is Successfully gmuted`\n**Reason :** `{reason}`",
+                f"{_format.mentionuser(user.first_name, user.id)} `is Successfully gmuted`\n**Reason :** `{reason}`",
             )
         else:
             await edit_or_reply(
                 event,
-                f"{_format.mentionuser(user.first_name ,user.id)} `is Successfully gmuted`",
+                f"{_format.mentionuser(user.first_name, user.id)} `is Successfully gmuted`",
             )
     if BOTLOG:
         reply = await event.get_reply_message()
@@ -271,14 +270,14 @@ async def startgmute(event):
             await event.client.send_message(
                 BOTLOG_CHATID,
                 "#GMUTE\n"
-                f"**User :** {_format.mentionuser(user.first_name ,user.id)} \n"
+                f"**User :** {_format.mentionuser(user.first_name, user.id)} \n"
                 f"**Reason :** `{reason}`",
             )
         else:
             await event.client.send_message(
                 BOTLOG_CHATID,
                 "#GMUTE\n"
-                f"**User :** {_format.mentionuser(user.first_name ,user.id)} \n",
+                f"**User :** {_format.mentionuser(user.first_name, user.id)} \n",
             )
         if reply:
             await reply.forward_to(BOTLOG_CHATID)
@@ -308,7 +307,7 @@ async def endgmute(event):
 
     if not is_muted(userid, "gmute"):
         return await edit_or_reply(
-            event, f"{_format.mentionuser(user.first_name ,user.id)} `is not gmuted`"
+            event, f"{_format.mentionuser(user.first_name, user.id)} `is not gmuted`"
         )
     try:
         unmute(userid, "gmute")
@@ -318,26 +317,26 @@ async def endgmute(event):
         if reason:
             await edit_or_reply(
                 event,
-                f"{_format.mentionuser(user.first_name ,user.id)} `is Successfully ungmuted`\n**Reason :** `{reason}`",
+                f"{_format.mentionuser(user.first_name, user.id)} `is Successfully ungmuted`\n**Reason :** `{reason}`",
             )
         else:
             await edit_or_reply(
                 event,
-                f"{_format.mentionuser(user.first_name ,user.id)} `is Successfully ungmuted`",
+                f"{_format.mentionuser(user.first_name, user.id)} `is Successfully ungmuted`",
             )
     if BOTLOG:
         if reason:
             await event.client.send_message(
                 BOTLOG_CHATID,
                 "#UNGMUTE\n"
-                f"**User :** {_format.mentionuser(user.first_name ,user.id)} \n"
+                f"**User :** {_format.mentionuser(user.first_name, user.id)} \n"
                 f"**Reason :** `{reason}`",
             )
         else:
             await event.client.send_message(
                 BOTLOG_CHATID,
                 "#UNGMUTE\n"
-                f"**User :** {_format.mentionuser(user.first_name ,user.id)} \n",
+                f"**User :** {_format.mentionuser(user.first_name, user.id)} \n",
             )
 
 

@@ -106,7 +106,7 @@ async def _(event):
         "oload": 'curl -F "file=@{full_file_path}" https://api.openload.cc/upload',
         "anonfiles": 'curl -F "file=@{full_file_path}" https://api.anonfiles.com/upload',
         "transfer": 'curl --upload-file "{full_file_path}" https://transfer.sh/'
-        + os.path.basename(file_name),
+                    + os.path.basename(file_name),
         "filebin": 'curl -X POST --data-binary "@{full_file_path}" -H "filename: {bare_local_name}" "https://filebin.net"',
         "anonymousfiles": 'curl -F "file=@{full_file_path}" https://api.anonymousfiles.io/',
         "vshare": 'curl -F "file=@{full_file_path}" https://api.vshare.is/upload',

@@ -50,7 +50,7 @@ async def set_not_afk(event):
                 endtime += f"{m}m {s}s" if m > 0 else f"{s}s"
     current_message = event.message.message
     if (("afk" not in current_message) or ("#afk" not in current_message)) and (
-        "on" in AFK_.USERAFK_ON
+            "on" in AFK_.USERAFK_ON
     ):
         shite = await event.client.send_message(
             event.chat_id,
@@ -143,7 +143,7 @@ async def on_afk(event):
         messaget = media_type(event)
         resalt = f"#AFK_TAGS \n<b>Group : </b><code>{hmm.title}</code>"
         if full is not None:
-            resalt += f"\n<b>From : </b> 👤{_format.htmlmentionuser(full.first_name , full.id)}"
+            resalt += f"\n<b>From : </b> 👤{_format.htmlmentionuser(full.first_name, full.id)}"
         if messaget is not None:
             resalt += f"\n<b>Message type : </b><code>{messaget}</code>"
         else:

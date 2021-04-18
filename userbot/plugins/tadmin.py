@@ -7,8 +7,8 @@ from telethon.errors.rpcerrorlist import UserAdminInvalidError, UserIdInvalidErr
 from telethon.tl.functions.channels import EditBannedRequest
 from telethon.tl.types import ChatBannedRights
 
-from ..utils import errors_handler
 from . import BOTLOG, BOTLOG_CHATID, extract_time, get_user_from_event
+from ..utils import errors_handler
 
 # =================== CONSTANT ===================
 NO_ADMIN = "`I am not an admin nub nibba!`"
@@ -59,7 +59,7 @@ async def tmuter(catty):
         # Announce that the function is done
         if reason:
             await catevent.edit(
-                f"{_format.mentionuser(user.first_name ,user.id)} was muted in {catty.chat.title}\n"
+                f"{_format.mentionuser(user.first_name, user.id)} was muted in {catty.chat.title}\n"
                 f"**Muted for : **{cattime}\n"
                 f"**Reason : **__{reason}__"
             )
@@ -74,7 +74,7 @@ async def tmuter(catty):
                 )
         else:
             await catevent.edit(
-                f"{_format.mentionuser(user.first_name ,user.id)} was muted in {catty.chat.title}\n"
+                f"{_format.mentionuser(user.first_name, user.id)} was muted in {catty.chat.title}\n"
                 f"Muted for {cattime}\n"
             )
             if BOTLOG:
@@ -160,7 +160,7 @@ async def ban(catty):
     # Shout out the ID, so that fedadmins can fban later
     if reason:
         await catevent.edit(
-            f"{_format.mentionuser(user.first_name ,user.id)} was banned in {catty.chat.title}\n"
+            f"{_format.mentionuser(user.first_name, user.id)} was banned in {catty.chat.title}\n"
             f"banned for {cattime}\n"
             f"Reason:`{reason}`"
         )
@@ -175,7 +175,7 @@ async def ban(catty):
             )
     else:
         await catevent.edit(
-            f"{_format.mentionuser(user.first_name ,user.id)} was banned in {catty.chat.title}\n"
+            f"{_format.mentionuser(user.first_name, user.id)} was banned in {catty.chat.title}\n"
             f"banned for {cattime}\n"
         )
         if BOTLOG:

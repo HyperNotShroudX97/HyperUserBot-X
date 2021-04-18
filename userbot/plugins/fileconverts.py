@@ -266,7 +266,7 @@ async def _(event):
         if input_str == "voice":
             new_required_file_caption = "voice_" + str(round(time.time())) + ".opus"
             new_required_file_name = (
-                Config.TMP_DOWNLOAD_DIRECTORY + "/" + new_required_file_caption
+                    Config.TMP_DOWNLOAD_DIRECTORY + "/" + new_required_file_caption
             )
             command_to_run = [
                 "ffmpeg",
@@ -287,7 +287,7 @@ async def _(event):
         elif input_str == "mp3":
             new_required_file_caption = "mp3_" + str(round(time.time())) + ".mp3"
             new_required_file_name = (
-                Config.TMP_DOWNLOAD_DIRECTORY + "/" + new_required_file_caption
+                    Config.TMP_DOWNLOAD_DIRECTORY + "/" + new_required_file_caption
             )
             command_to_run = [
                 "ffmpeg",

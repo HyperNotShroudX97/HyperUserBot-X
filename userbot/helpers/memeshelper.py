@@ -124,7 +124,6 @@ GDMORNING = [
     "`It is easy to imagine the world coming to an end. But it is difficult to imagine spending a day without my friends. Good morning.`",
 ]
 
-
 RENDISTR = [
     "`I Know Uh ez Rendi Bhay Dont show Your Randi Pesa Here`",
     "`Jag Suna suna laage Sab #maderchod bhay`",
@@ -434,7 +433,6 @@ SLAP_TEMPLATES = [
     "{user1} slaps {victim} with a DMCA takedown request!",
 ]
 
-
 ITEMS = [
     "cast iron skillet",
     "large trout",
@@ -536,7 +534,6 @@ UWUS = [
     "((+_+))",
 ]
 
-
 SHGS = [
     "┐(´д｀)┌",
     "┐(´～｀)┌",
@@ -602,7 +599,6 @@ CRI = [
     "༼ಢ_ಢ༽",
     "༼ ༎ຶ ෴ ༎ຶ༽",
 ]
-
 
 FACEREACTS = [
     [
