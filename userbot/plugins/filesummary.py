@@ -97,8 +97,8 @@ async def _(event):
         runtime = str(endtime - starttime) + " seconds"
     avghubytes = humanbytes(weird_division(totalsize, totalcount))
     avgruntime = (
-            str(round((weird_division((endtime - starttime), totalcount)) * 1000, 2))
-            + " ms"
+        str(round((weird_division((endtime - starttime), totalcount)) * 1000, 2))
+        + " ms"
     )
     totalstring = f"<code><b>Total files : </b>       | {str(totalcount)}\
                   \nTotal file size :    | {humanbytes(totalsize)}\
@@ -178,7 +178,7 @@ async def _(event):
         for m in TYPES
     }
     async for message in event.client.iter_messages(
-            entity=entity, limit=None, from_user=userentity
+        entity=entity, limit=None, from_user=userentity
     ):
         msg_count += 1
         media = media_type(message)
@@ -214,8 +214,8 @@ async def _(event):
         runtime = str(endtime - starttime) + " seconds"
     avghubytes = humanbytes(weird_division(totalsize, totalcount))
     avgruntime = (
-            str(round((weird_division((endtime - starttime), totalcount)) * 1000, 2))
-            + " ms"
+        str(round((weird_division((endtime - starttime), totalcount)) * 1000, 2))
+        + " ms"
     )
     totalstring = f"<code><b>Total files : </b>       | {str(totalcount)}\
                   \nTotal file size :    | {humanbytes(totalsize)}\

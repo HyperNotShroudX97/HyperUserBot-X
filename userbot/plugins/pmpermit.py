@@ -31,12 +31,11 @@ if Config.PRIVATE_GROUP_ID != 0:
         if event.text.startswith((".block", ".disapprove", ".a", ".da", ".approve")):
             return
         if (
-                event.is_private
-                and not pmpermit_sql.is_approved(chat.id)
-                and chat.id not in PM_WARNS
+            event.is_private
+            and not pmpermit_sql.is_approved(chat.id)
+            and chat.id not in PM_WARNS
         ):
             pmpermit_sql.approve(chat.id, "outgoing")
-
 
     @bot.on(admin_cmd(pattern="(a|approve)(?: |$)(.*)"))
     async def approve_p_m(event):
@@ -77,7 +76,6 @@ if Config.PRIVATE_GROUP_ID != 0:
                 5,
             )
 
-
     @bot.on(admin_cmd(pattern="(da|disapprove)(?: |$)(.*)"))
     async def disapprove_p_m(event):
         if event.is_private:
@@ -106,7 +104,6 @@ if Config.PRIVATE_GROUP_ID != 0:
                 5,
             )
 
-
     @bot.on(admin_cmd(pattern="block(?: |$)(.*)"))
     async def block_p_m(event):
         if event.is_private:
@@ -122,7 +119,6 @@ if Config.PRIVATE_GROUP_ID != 0:
         )
         await event.client(functions.contacts.BlockRequest(user.id))
 
-
     @bot.on(admin_cmd(pattern="unblock(?: |$)(.*)"))
     async def unblock_pm(event):
         if event.is_private:
@@ -135,7 +131,6 @@ if Config.PRIVATE_GROUP_ID != 0:
         await event.edit(
             f"`You are Unblocked Now .You Can Message Me From now..`[{user.first_name}](tg://user?id={user.id})"
         )
-
 
     @bot.on(admin_cmd(pattern="listapproved$"))
     async def approve_p_m(event):
@@ -158,7 +153,6 @@ if Config.PRIVATE_GROUP_ID != 0:
             caption="`Current Approved PMs`",
         )
 
-
     @bot.on(admin_cmd(pattern="(disapprove all|da all)$"))
     async def disapprove_p_m(event):
         if event.fwd_from:
@@ -166,7 +160,6 @@ if Config.PRIVATE_GROUP_ID != 0:
         result = "`ok , everyone is disapproved now`"
         pmpermit_sql.disapprove_all()
         await edit_delete(event, result, parse_mode=parse_pre, time=10)
-
 
     @bot.on(events.NewMessage(incoming=True))
     async def on_new_private_message(event):
@@ -197,7 +190,6 @@ if Config.PRIVATE_GROUP_ID != 0:
                 return
         if not pmpermit_sql.is_approved(chat_id):
             await do_pm_permit_action(chat_id, event, sender)
-
 
     async def do_pm_permit_action(chat_id, event, sender):
         if chat_id not in PM_WARNS:
@@ -239,23 +231,23 @@ if Config.PRIVATE_GROUP_ID != 0:
         if PMMENU:
             if Config.CUSTOM_PMPERMIT_TEXT:
                 USER_BOT_NO_WARN = (
-                        Config.CUSTOM_PMPERMIT_TEXT.format(
-                            mention=mention,
-                            first=first,
-                            last=last,
-                            fullname=fullname,
-                            username=username,
-                            userid=userid,
-                            my_first=my_first,
-                            my_last=my_last,
-                            my_fullname=my_fullname,
-                            my_username=my_username,
-                            my_mention=my_mention,
-                            totalwarns=totalwarns,
-                            warns=warns,
-                        )
-                        + "\n\n"
-                        + "**Send** `/start` ** so that my master can decide why you're here.**"
+                    Config.CUSTOM_PMPERMIT_TEXT.format(
+                        mention=mention,
+                        first=first,
+                        last=last,
+                        fullname=fullname,
+                        username=username,
+                        userid=userid,
+                        my_first=my_first,
+                        my_last=my_last,
+                        my_fullname=my_fullname,
+                        my_username=my_username,
+                        my_mention=my_mention,
+                        totalwarns=totalwarns,
+                        warns=warns,
+                    )
+                    + "\n\n"
+                    + "**Send** `/start` ** so that my master can decide why you're here.**"
                 )
             else:
 
@@ -297,6 +289,7 @@ if Config.PRIVATE_GROUP_ID != 0:
             await PREV_REPLY_MESSAGE[chat_id].delete()
         PREV_REPLY_MESSAGE[chat_id] = r
         return None
+
 
 CMD_HELP.update(
     {

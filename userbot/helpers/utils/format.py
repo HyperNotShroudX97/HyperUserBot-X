@@ -16,9 +16,9 @@ def paste_text(text):
     try:
         nekokey = (
             requests.post("https://nekobin.com/api/documents", json={"content": text})
-                .json()
-                .get("result")
-                .get("key")
+            .json()
+            .get("result")
+            .get("key")
         )
         link = f"https://nekobin.com/{nekokey}"
     except Exception:
@@ -52,15 +52,15 @@ def replacetext(text):
             '"',
             "",
         )
-            .replace(
+        .replace(
             "\\r",
             "",
         )
-            .replace(
+        .replace(
             "\\n",
             "",
         )
-            .replace(
+        .replace(
             "\\",
             "",
         )

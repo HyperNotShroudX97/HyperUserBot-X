@@ -22,10 +22,10 @@ def shorten(description, info="anilist.co"):
         msg += f"\n**Description**: \n   {description}"
     return (
         msg.replace("<br>", "")
-            .replace("</br>", "")
-            .replace("<i>", "")
-            .replace("</i>", "")
-            .replace("__", "**")
+        .replace("</br>", "")
+        .replace("<i>", "")
+        .replace("</i>", "")
+        .replace("__", "**")
     )
 
 
@@ -206,8 +206,8 @@ async def anilist(event):
     variables = {"query": search}
     json = (
         requests.post(url, json={"query": character_query, "variables": variables})
-            .json()["data"]
-            .get("Character", None)
+        .json()["data"]
+        .get("Character", None)
     )
     if json:
         msg = f"**{json.get('name').get('full')}**\n"
@@ -259,8 +259,8 @@ async def anilist(event):
     variables = {"search": search}
     json = (
         requests.post(url, json={"query": manga_query, "variables": variables})
-            .json()["data"]
-            .get("Media", None)
+        .json()["data"]
+        .get("Media", None)
     )
     ms_g = ""
     if json:
@@ -290,9 +290,9 @@ async def anilist(event):
         ms_g += f"_{json.get('description', None)}_"
         ms_g = (
             ms_g.replace("<br>", "")
-                .replace("</br>", "")
-                .replace("<i>", "")
-                .replace("</i>", "")
+            .replace("</br>", "")
+            .replace("<i>", "")
+            .replace("</i>", "")
         )
         if image:
             try:

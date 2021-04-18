@@ -81,9 +81,9 @@ async def echo(cat):
             requests.post(
                 "https://nekobin.com/api/documents", json={"content": output_str}
             )
-                .json()
-                .get("result")
-                .get("key")
+            .json()
+            .get("result")
+            .get("key")
         )
         url = f"https://nekobin.com/{key}"
         reply_text = f"echo enabled users: [here]({url})"

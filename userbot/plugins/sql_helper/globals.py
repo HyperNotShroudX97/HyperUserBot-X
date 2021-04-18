@@ -22,9 +22,9 @@ def gvarstatus(variable):
     try:
         return (
             SESSION.query(Globals)
-                .filter(Globals.variable == str(variable))
-                .first()
-                .value
+            .filter(Globals.variable == str(variable))
+            .first()
+            .value
         )
     except BaseException:
         return None
@@ -43,8 +43,8 @@ def addgvar(variable, value):
 def delgvar(variable):
     rem = (
         SESSION.query(Globals)
-            .filter(Globals.variable == str(variable))
-            .delete(synchronize_session="fetch")
+        .filter(Globals.variable == str(variable))
+        .delete(synchronize_session="fetch")
     )
     if rem:
         SESSION.commit()

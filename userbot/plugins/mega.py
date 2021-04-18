@@ -32,8 +32,8 @@ from urllib.error import HTTPError
 
 from pySmartDL import SmartDL
 
-from . import LOGS, time_formatter
 from ..utils import humanbytes
+from . import LOGS, time_formatter
 
 TMP_DOWNLOAD_DIRECTORY = Config.TMP_DOWNLOAD_DIRECTORY
 
@@ -133,7 +133,7 @@ async def mega_downloader(megadl):
                 f"**➥ Duration -> **`{time_formatter(round(diff))}`"
             )
             if round(diff % 15.00) == 0 and (
-                    display_message != current_message or total_length == downloaded
+                display_message != current_message or total_length == downloaded
             ):
                 await catevent.edit(current_message)
                 await asyncio.sleep(1)

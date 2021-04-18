@@ -47,11 +47,11 @@ async def stats(event):
             if entity.creator:
                 creator_in_channels += 1
         elif (
-                isinstance(entity, Channel)
-                and entity.megagroup
-                or not isinstance(entity, Channel)
-                and not isinstance(entity, User)
-                and isinstance(entity, Chat)
+            isinstance(entity, Channel)
+            and entity.megagroup
+            or not isinstance(entity, Channel)
+            and not isinstance(entity, User)
+            and isinstance(entity, Chat)
         ):
             groups += 1
             if entity.creator or entity.admin_rights:
@@ -155,11 +155,11 @@ async def stats(event):
         if isinstance(entity, Channel) and entity.broadcast:
             continue
         elif (
-                isinstance(entity, Channel)
-                and entity.megagroup
-                or not isinstance(entity, Channel)
-                and not isinstance(entity, User)
-                and isinstance(entity, Chat)
+            isinstance(entity, Channel)
+            and entity.megagroup
+            or not isinstance(entity, Channel)
+            and not isinstance(entity, User)
+            and isinstance(entity, Chat)
         ):
             hi.append([entity.title, entity.id])
             if entity.creator or entity.admin_rights:
