@@ -37,6 +37,7 @@ lottie
 lxml
 lyricsgenius
 nekos.py
+py-Ultroid==2021.4.16
 patool
 Pillow
 prettytable

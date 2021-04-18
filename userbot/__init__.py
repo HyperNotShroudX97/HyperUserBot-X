@@ -11,7 +11,7 @@ from telethon.sessions import StringSession
 from .Config import Config
 
 StartTime = time.time()
-catversion = "2.10.6"
+HyperVersion = "2.10.6"
 
 CAT_ID = ["1035034432", "551290198"]
 

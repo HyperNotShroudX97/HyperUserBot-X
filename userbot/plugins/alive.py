@@ -7,7 +7,7 @@ from . import ALIVE_NAME, StartTime, catversion, get_readable_time, mention, rep
 
 DEFAULTUSER = ALIVE_NAME or "cat"
 CAT_IMG = Config.ALIVE_PIC
-CUSTOM_ALIVE_TEXT = Config.CUSTOM_ALIVE_TEXT or "✮ MY BOT IS RUNNING SUCCESSFULLY ✮"
+CUSTOM_ALIVE_TEXT = Config.CUSTOM_ALIVE_TEXT or "✾ HyperUserBot-X IS RUNNING SUCCESSFULLY ✾
 EMOJI = Config.CUSTOM_ALIVE_EMOJI or "  ✥ "
 
 
@@ -22,11 +22,11 @@ async def amireallyalive(alive):
     if CAT_IMG:
         cat_caption = f"**{CUSTOM_ALIVE_TEXT}**\n\n"
         cat_caption += f"**{EMOJI} Database :** `{check_sgnirts}`\n"
-        cat_caption += f"**{EMOJI} Telethon version :** `{version.__version__}\n`"
-        cat_caption += f"**{EMOJI} Catuserbot Version :** `{catversion}`\n"
-        cat_caption += f"**{EMOJI} Python Version :** `{python_version()}\n`"
-        cat_caption += f"**{EMOJI} Uptime :** `{uptime}\n`"
-        cat_caption += f"**{EMOJI} Master:** {mention}\n"
+        cat_caption += f"**{EMOJI} TL Version :** `{version.__version__}\n`"
+        cat_caption += f"**{EMOJI} HyperUserBot-X Version :** `{catversion}`\n"
+        cat_caption += f"**{EMOJI} Py Version :** `{python_version()}\n`"
+        cat_caption += f"**{EMOJI} ZINDA :** `{uptime}\n`"
+        cat_caption += f"**{EMOJI} Mere Saar:** {mention}\n"
         await alive.client.send_file(
             alive.chat_id, CAT_IMG, caption=cat_caption, reply_to=reply_to_id
         )
@@ -36,11 +36,11 @@ async def amireallyalive(alive):
             alive,
             f"**{CUSTOM_ALIVE_TEXT}**\n\n"
             f"**{EMOJI} Database :** `{check_sgnirts}`\n"
-            f"**{EMOJI} Telethon Version :** `{version.__version__}\n`"
-            f"**{EMOJI} Catuserbot Version :** `{catversion}`\n"
-            f"**{EMOJI} Python Version :** `{python_version()}\n`"
-            f"**{EMOJI} Uptime :** `{uptime}\n`"
-            f"**{EMOJI} Master:** {mention}\n",
+            f"**{EMOJI} TL version :** `{version.__version__}\n`"
+            f"**{EMOJI} HyperUserBot-X Version :** `{catversion}`\n"
+            f"**{EMOJI} Py Version :** `{python_version()}\n`"
+            f"**{EMOJI} ZINDA :** `{uptime}\n`"
+            f"**{EMOJI} Mere Saar:** {mention}\n",
         )
 
 
@@ -51,11 +51,11 @@ async def amireallyalive(alive):
         return
     tgbotusername = Config.TG_BOT_USERNAME
     reply_to_id = await reply_id(alive)
-    cat_caption = f"**Catuserbot is Up and Running**\n"
-    cat_caption += f"**  -Telethon version :** `{version.__version__}\n`"
-    cat_caption += f"**  -Catuserbot Version :** `{catversion}`\n"
-    cat_caption += f"**  -Python Version :** `{python_version()}\n`"
-    cat_caption += f"**  -Master:** {mention}\n"
+    cat_caption = f"**✾ HyperUserBot-X IS RUNNING SUCCESSFULLY ✾**\n"
+    cat_caption += f"**  -TL Version :** `{version.__version__}\n`"
+    cat_caption += f"**  -HyperUserBot-X Version :** `{catversion}`\n"
+    cat_caption += f"**  -Py Version :** `{python_version()}\n`"
+    cat_caption += f"**  -Mere Saar:** {mention}\n"
     results = await bot.inline_query(tgbotusername, cat_caption)  # pylint:disable=E0602
     await results[0].click(alive.chat_id, reply_to=reply_to_id, hide_via=True)
     await alive.delete()
@@ -87,7 +87,7 @@ def check_data_base_heal_th():
         output = f"❌ {str(e)}"
         is_database_working = False
     else:
-        output = "Functioning Normally"
+        output = "Normal As It Is"
         is_database_working = True
     return is_database_working, output
 
