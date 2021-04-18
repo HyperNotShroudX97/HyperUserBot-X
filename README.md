@@ -1,4 +1,3 @@
-Team Hyper
 [![HyperUserBot-X logo](https://telegra.ph/file/c92b6368929e1e44112d5.jpg)](https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2Fsasukeuchiha-clan09%2FHyperUserBot-X%2Ftree%2Fbugs&template=https%3A%2F%2Fgithub.com%2Fsasukeuchiha-clan09%2FHyperUserBot-X)
 [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fsasukeuchiha-clan09%2FHyperUserBot-X&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://github.com/sasukeuchiha-clan09/HyperUserBot-X)
 [![CodeFactor](https://www.codefactor.io/repository/github/sasukeuchiha-clan09/HyperUserBot-X/badge?&style=flat-square)](https://www.codefactor.io/repository/github/sasukeuchiha-clan09/HyperUserBot-X)
@@ -25,7 +24,7 @@ MAINTAINED BY :
 ## How to deploy catuserbot
 ### Heroku Deploy
   - [Source Code](https://github.com/sasukeuchiha-clan/catpack)
-  - [![Deploy To Heroku](https://www.herokucdn.com/deploy/button.svg)](https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2FMr-confused%2Fcatpack&template=https%3A%2F%2Fgithub.com%2FMr-confused%2Fcatpack)
+  - [![Deploy To Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/sasukeuchiha-clan/catpack)
 
 ## Support
    <a href="https://t.me/"><img src="https://img.shields.io/badge/Channel%20Support%3F-yes-green?&style=flat-square?&logo=telegram" width=220px></a></p>
