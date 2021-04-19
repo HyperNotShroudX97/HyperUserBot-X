@@ -74,8 +74,8 @@ def del_keyword_broadcastlist(keywoard):
     with CATBROADCAST_INSERTION_LOCK:
         broadcast_group = (
             SESSION.query(CatBroadcast.keywoard)
-            .filter(CatBroadcast.keywoard == keywoard)
-            .delete()
+                .filter(CatBroadcast.keywoard == keywoard)
+                .delete()
         )
         BROADCAST_SQL_.BROADCAST_CHANNELS.pop(keywoard)
         SESSION.commit()
@@ -104,8 +104,8 @@ def num_broadcastlist_chat(keywoard):
     try:
         return (
             SESSION.query(CatBroadcast.keywoard)
-            .filter(CatBroadcast.keywoard == keywoard)
-            .count()
+                .filter(CatBroadcast.keywoard == keywoard)
+                .count()
         )
     finally:
         SESSION.close()

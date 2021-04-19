@@ -6,8 +6,8 @@ ported to telethon by @mrconfused and @sandy1709
 import base64
 import os
 
-from glitch_this import ImageGlitcher
 from PIL import Image
+from glitch_this import ImageGlitcher
 
 
 @bot.on(admin_cmd(outgoing=True, pattern="(glitch|glitchs)(?: |$)(.*)"))

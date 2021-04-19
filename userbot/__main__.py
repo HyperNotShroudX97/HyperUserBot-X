@@ -59,8 +59,8 @@ for name in files:
 
 LOGS.info("Yay your userbot is officially working.!!!")
 LOGS.info(
-    "Congratulation, Ab jaake .alive Karke dekho pata toh chale bot chalu hai yaa mar gaya 😂😂\
-    \nIf you need assistance, then wait will make support group soon."
+    "Congratulation, now type .alive to see message if bot is live\
+    \nIf you need assistance, head to https://t.me/catuserbot_support"
 )
 
 

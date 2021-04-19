@@ -102,7 +102,7 @@ async def variable(var):
             return await cat.edit("`Please specify ConfigVars you want to delete`")
         await asyncio.sleep(1.5)
         if variable not in heroku_var:
-            return await cat.edit(f"`{variable}`**  is not exists**")
+            return await cat.edit(f"`{variable}`**  does not exist**")
 
         await cat.edit(f"`{variable}`  **successfully deleted**")
         del heroku_var[variable]
@@ -200,9 +200,9 @@ async def _(dyno):
     data = app.get_log()
     key = (
         requests.post("https://nekobin.com/api/documents", json={"content": data})
-        .json()
-        .get("result")
-        .get("key")
+            .json()
+            .get("result")
+            .get("key")
     )
     url = f"https://nekobin.com/{key}"
     reply_text = f"Recent 100 lines of heroku logs: [here]({url})"
