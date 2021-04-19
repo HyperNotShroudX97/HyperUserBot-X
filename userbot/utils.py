@@ -264,7 +264,7 @@ def errors_handler(func):
 
 
 async def progress(
-        current, total, event, start, type_of_ps, file_name=None, is_cancelled=None
+    current, total, event, start, type_of_ps, file_name=None, is_cancelled=None
 ):
     """Generic progress_callback for uploads and downloads."""
     now = time.time()
@@ -334,11 +334,11 @@ def time_formatter(milliseconds: int) -> str:
     hours, minutes = divmod(minutes, 60)
     days, hours = divmod(hours, 24)
     tmp = (
-            ((str(days) + " day(s), ") if days else "")
-            + ((str(hours) + " hour(s), ") if hours else "")
-            + ((str(minutes) + " minute(s), ") if minutes else "")
-            + ((str(seconds) + " second(s), ") if seconds else "")
-            + ((str(milliseconds) + " millisecond(s), ") if milliseconds else "")
+        ((str(days) + " day(s), ") if days else "")
+        + ((str(hours) + " hour(s), ") if hours else "")
+        + ((str(minutes) + " minute(s), ") if minutes else "")
+        + ((str(seconds) + " second(s), ") if seconds else "")
+        + ((str(milliseconds) + " millisecond(s), ") if milliseconds else "")
     )
     return tmp[:-2]
 
@@ -357,7 +357,7 @@ async def is_admin(client, chat_id, user_id):
         req_jo = await client(GetParticipantRequest(channel=chat_id, user_id=user_id))
         chat_participant = req_jo.participant
         if isinstance(
-                chat_participant, (ChannelParticipantCreator, ChannelParticipantAdmin)
+            chat_participant, (ChannelParticipantCreator, ChannelParticipantAdmin)
         ):
             return True
     except Exception as e:

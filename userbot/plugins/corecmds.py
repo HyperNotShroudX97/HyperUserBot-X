@@ -3,8 +3,8 @@ import os
 from datetime import datetime
 from pathlib import Path
 
-from . import ALIVE_NAME, CMD_LIST, SUDO_LIST
 from ..utils import load_module, remove_plugin
+from . import ALIVE_NAME, CMD_LIST, SUDO_LIST
 
 DELETE_TIMEOUT = 5
 thumb_image_path = os.path.join(Config.TMP_DOWNLOAD_DIRECTORY, "thumb_image.jpg")

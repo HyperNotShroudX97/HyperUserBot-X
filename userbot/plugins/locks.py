@@ -6,9 +6,9 @@ from telethon.tl.functions.messages import EditChatDefaultBannedRightsRequest
 from telethon.tl.functions.messages import ImportChatInviteRequest as Get
 from telethon.tl.types import ChatBannedRights
 
+from ..utils import is_admin
 from . import BOTLOG, get_user_from_event
 from .sql_helper.locks_sql import get_locks, is_locked, update_lock
-from ..utils import is_admin
 
 
 @bot.on(admin_cmd(pattern=r"lock (.*)"))
@@ -968,7 +968,7 @@ async def check_incoming_messages(event):
         if entities:
             for entity in entities:
                 if isinstance(
-                        entity, (types.MessageEntityTextUrl, types.MessageEntityUrl)
+                    entity, (types.MessageEntityTextUrl, types.MessageEntityUrl)
                 ):
                     is_url = True
         if is_url:

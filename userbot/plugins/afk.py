@@ -50,7 +50,7 @@ async def set_not_afk(event):
                 endtime += f"{m}m {s}s" if m > 0 else f"{s}s"
     current_message = event.message.message
     if (("afk" not in current_message) or ("#afk" not in current_message)) and (
-            "on" in AFK_.USERAFK_ON
+        "on" in AFK_.USERAFK_ON
     ):
         shite = await event.client.send_message(
             event.chat_id,

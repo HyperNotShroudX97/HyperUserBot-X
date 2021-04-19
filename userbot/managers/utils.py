@@ -10,14 +10,14 @@ from ..Config import Config
 # https://t.me/c/1220993104/623253
 # https://docs.telethon.dev/en/latest/misc/changelog.html#breaking-changes
 async def edit_or_reply(
-        event,
-        text,
-        parse_mode=None,
-        link_preview=None,
-        file_name=None,
-        aslink=False,
-        linktext=None,
-        caption=None,
+    event,
+    text,
+    parse_mode=None,
+    link_preview=None,
+    file_name=None,
+    aslink=False,
+    linktext=None,
+    caption=None,
 ):
     link_preview = link_preview or False
     reply_to = await event.get_reply_message()
@@ -43,9 +43,9 @@ async def edit_or_reply(
                 requests.post(
                     "https://nekobin.com/api/documents", json={"content": text}
                 )
-                    .json()
-                    .get("result")
-                    .get("key")
+                .json()
+                .get("result")
+                .get("key")
             )
             text = linktext + f" [here](https://nekobin.com/{key})"
         except Exception:

@@ -35,7 +35,7 @@ async def kakashi(magisk):
             data["app"]["link"] = magisk_repo + "canary/" + data["app"]["link"]
             data["magisk"]["link"] = magisk_repo + "canary/" + data["magisk"]["link"]
             data["uninstaller"]["link"] = (
-                    magisk_repo + "canary/" + data["uninstaller"]["link"]
+                magisk_repo + "canary/" + data["uninstaller"]["link"]
             )
 
         releases += (
@@ -149,8 +149,8 @@ async def devices_specifications(request):
         BeautifulSoup(
             get("https://www.devicespecifications.com/en/brand-more").content, "lxml"
         )
-            .find("div", {"class": "brand-listing-container-news"})
-            .findAll("a")
+        .find("div", {"class": "brand-listing-container-news"})
+        .findAll("a")
     )
     brand_page_url = None
     try:
@@ -185,9 +185,9 @@ async def devices_specifications(request):
             title = re.findall(r"<b>(.*?)</b>", item)[0].strip()
             data = (
                 re.findall(r"</b>: (.*?)<br/>", item)[0]
-                    .replace("<b>", "")
-                    .replace("</b>", "")
-                    .strip()
+                .replace("<b>", "")
+                .replace("</b>", "")
+                .strip()
             )
             reply += f"**{title}**: {data}\n"
     await edit_or_reply(request, reply)

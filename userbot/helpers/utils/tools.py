@@ -1,13 +1,13 @@
 import os
 from typing import Optional
 
-from PIL import Image
 from hachoir.metadata import extractMetadata
 from hachoir.parser import createParser
+from PIL import Image
 
-from .utils import runcmd
-from ..tools import media_type
 from ...managers import edit_delete, edit_or_reply
+from ..tools import media_type
+from .utils import runcmd
 
 
 async def media_to_pic(event, reply):
@@ -46,7 +46,7 @@ async def media_to_pic(event, reply):
 
 
 async def take_screen_shot(
-        video_file: str, duration: int, path: str = ""
+    video_file: str, duration: int, path: str = ""
 ) -> Optional[str]:
     thumb_image_path = path or os.path.join(
         "./temp/", f"{os.path.basename(video_file)}.jpg"

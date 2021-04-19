@@ -152,15 +152,15 @@ async def check_media(reply_message):
             data = reply_message.photo
         elif reply_message.document:
             if (
-                    DocumentAttributeFilename(file_name="AnimatedSticker.tgs")
-                    in reply_message.media.document.attributes
+                DocumentAttributeFilename(file_name="AnimatedSticker.tgs")
+                in reply_message.media.document.attributes
             ):
                 return False
             if (
-                    reply_message.gif
-                    or reply_message.video
-                    or reply_message.audio
-                    or reply_message.voice
+                reply_message.gif
+                or reply_message.video
+                or reply_message.audio
+                or reply_message.voice
             ):
                 return False
             data = reply_message.media.document

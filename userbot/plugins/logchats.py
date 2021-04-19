@@ -66,10 +66,10 @@ async def log_tagged_messages(event):
     if gvarstatus("GRPLOG") and gvarstatus("GRPLOG") == "false":
         return
     if (
-            (no_log_pms_sql.is_approved(hmm.id))
-            or (not Config.PM_LOGGER_GROUP_ID)
-            or ("on" in AFK_.USERAFK_ON)
-            or (await event.get_sender() and (await event.get_sender()).bot)
+        (no_log_pms_sql.is_approved(hmm.id))
+        or (not Config.PM_LOGGER_GROUP_ID)
+        or ("on" in AFK_.USERAFK_ON)
+        or (await event.get_sender() and (await event.get_sender()).bot)
     ):
         return
     full = None
