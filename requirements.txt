@@ -6,7 +6,7 @@ aiohttp
 beautifulsoup4
 cairosvg
 cfscrape
-coffeehouse==2.2.6
+coffeehouse==2.2.4
 colour
 covid
 cowpy
@@ -61,7 +61,7 @@ search-engine-parser
 selenium
 spamwatch
 speedtest-cli
-sqlalchemy==1.4.9
+sqlalchemy==1.3.23
 telegraph
 telethon-tgcrypto
 tswift
