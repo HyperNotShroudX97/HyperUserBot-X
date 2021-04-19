@@ -5,11 +5,11 @@
 import base64
 import os
 
+from telegraph import exceptions, upload_file
 from telethon import events
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 from telethon.tl.functions.messages import ImportChatInviteRequest as Get
 
-from telegraph import exceptions, upload_file
 from . import awooify, baguette, iphonex, lolice
 
 

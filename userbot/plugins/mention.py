@@ -41,7 +41,7 @@ async def _(event):
     chat = await event.get_input_chat()
     reply_to_id = await reply_id(event)
     async for x in event.client.iter_participants(
-            chat, filter=ChannelParticipantsAdmins
+        chat, filter=ChannelParticipantsAdmins
     ):
         if not x.bot:
             mentions += f"[\u2063](tg://user?id={x.id})"

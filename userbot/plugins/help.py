@@ -37,9 +37,9 @@ async def cmd_list(event):
                 requests.post(
                     "https://nekobin.com/api/documents", json={"content": data}
                 )
-                    .json()
-                    .get("result")
-                    .get("key")
+                .json()
+                .get("result")
+                .get("key")
             )
             url = f"https://nekobin.com/{key}"
             reply_text = f"**All commands of the catuserbot can be seen [here]({url})**"
@@ -106,9 +106,9 @@ async def info(event):
                 requests.post(
                     "https://nekobin.com/api/documents", json={"content": data}
                 )
-                    .json()
-                    .get("result")
-                    .get("key")
+                .json()
+                .get("result")
+                .get("key")
             )
             url = f"https://nekobin.com/{key}"
             reply_text = f"All commands of the catuserbot are [here]({url})"
@@ -181,8 +181,8 @@ async def _(event):
         return
     result = await event.client(functions.help.GetNearestDcRequest())
     result = (
-            _format.yaml_format(result)
-            + "\n\n**List Of Telegram Data Centres:**\
+        _format.yaml_format(result)
+        + "\n\n**List Of Telegram Data Centres:**\
                 \nDC1 : Miami FL, USA\
                 \nDC2 : Amsterdam, NL\
                 \nDC3 : Miami FL, USA\

@@ -294,16 +294,16 @@ async def variable(var):
 CMD_HELP.update(
     {
         "updater": "**Plugin : **`updater`"
-                   "\n\n•  **Syntax : **`.update`"
-                   "\n•  **Function :** Checks if the main userbot repository has any updates "
-                   "and shows a changelog if so."
-                   "\n\n•  **Syntax : **`.update now`"
-                   "\n•  **Function :** Update your userbot, "
-                   "if there are any updates in your userbot repository.if you restart these goes back to last time when you deployed"
-                   "\n\n•  **Syntax : **`.update deploy`"
-                   "\n•  **Function :** Deploy your userbot.So even you restart it doesnt go back to previous version"
-                   "\nThis will triggered deploy always, even no updates."
-                   "\n\n•  **Syntax : **`.badcat`"
-                   "\n•  **Function :** Shifts from official cat repo to jisan's repo(for gali commands)"
+        "\n\n•  **Syntax : **`.update`"
+        "\n•  **Function :** Checks if the main userbot repository has any updates "
+        "and shows a changelog if so."
+        "\n\n•  **Syntax : **`.update now`"
+        "\n•  **Function :** Update your userbot, "
+        "if there are any updates in your userbot repository.if you restart these goes back to last time when you deployed"
+        "\n\n•  **Syntax : **`.update deploy`"
+        "\n•  **Function :** Deploy your userbot.So even you restart it doesnt go back to previous version"
+        "\nThis will triggered deploy always, even no updates."
+        "\n\n•  **Syntax : **`.badcat`"
+        "\n•  **Function :** Shifts from official cat repo to jisan's repo(for gali commands)"
     }
 )
