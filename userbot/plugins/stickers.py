@@ -10,8 +10,8 @@ from os import remove
 
 import emoji as catemoji
 import requests
-from PIL import Image
 from bs4 import BeautifulSoup as bs
+from PIL import Image
 from telethon.tl import functions, types
 from telethon.tl.functions.messages import GetStickerSetRequest
 from telethon.tl.functions.messages import ImportChatInviteRequest as Get
@@ -99,18 +99,18 @@ async def resize_photo(photo):
 
 
 async def newpacksticker(
-        catevent,
-        conv,
-        cmd,
-        args,
-        pack,
-        packnick,
-        stfile,
-        emoji,
-        packname,
-        is_anim,
-        otherpack=False,
-        pkang=False,
+    catevent,
+    conv,
+    cmd,
+    args,
+    pack,
+    packnick,
+    stfile,
+    emoji,
+    packname,
+    is_anim,
+    otherpack=False,
+    pkang=False,
 ):
     await conv.send_message(cmd)
     await conv.get_response()
@@ -158,18 +158,18 @@ async def newpacksticker(
 
 
 async def add_to_pack(
-        catevent,
-        conv,
-        args,
-        packname,
-        pack,
-        userid,
-        username,
-        is_anim,
-        stfile,
-        emoji,
-        cmd,
-        pkang=False,
+    catevent,
+    conv,
+    args,
+    packname,
+    pack,
+    userid,
+    username,
+    is_anim,
+    stfile,
+    emoji,
+    cmd,
+    pkang=False,
 ):
     await conv.send_message("/addsticker")
     await conv.get_response()
@@ -255,8 +255,8 @@ async def kang(args):
             photo = io.BytesIO()
             await args.client.download_file(message.media.document, photo)
             if (
-                    DocumentAttributeFilename(file_name="sticker.webp")
-                    in message.media.document.attributes
+                DocumentAttributeFilename(file_name="sticker.webp")
+                in message.media.document.attributes
             ):
                 emoji = message.media.document.attributes[1].alt
                 emojibypass = True
@@ -314,8 +314,8 @@ async def kang(args):
         )
         htmlstr = response.read().decode("utf8").split("\n")
         if (
-                "  A <strong>Telegram</strong> user has created the <strong>Sticker&nbsp;Set</strong>."
-                not in htmlstr
+            "  A <strong>Telegram</strong> user has created the <strong>Sticker&nbsp;Set</strong>."
+            not in htmlstr
         ):
             async with args.client.conversation("Stickers") as conv:
                 packname, emoji = await add_to_pack(
@@ -439,8 +439,8 @@ async def pack_kang(event):
             photo = io.BytesIO()
             await event.client.download_file(message, photo)
             if (
-                    DocumentAttributeFilename(file_name="sticker.webp")
-                    in message.attributes
+                DocumentAttributeFilename(file_name="sticker.webp")
+                in message.attributes
             ):
                 emoji = message.attributes[1].alt
         elif "tgsticker" in message.mime_type:
@@ -490,8 +490,8 @@ async def pack_kang(event):
             )
             htmlstr = response.read().decode("utf8").split("\n")
             if (
-                    "  A <strong>Telegram</strong> user has created the <strong>Sticker&nbsp;Set</strong>."
-                    in htmlstr
+                "  A <strong>Telegram</strong> user has created the <strong>Sticker&nbsp;Set</strong>."
+                in htmlstr
             ):
                 async with event.client.conversation("Stickers") as conv:
                     pack, catpackname = await newpacksticker(

@@ -7,9 +7,9 @@ from telethon import events
 from telethon.errors import ChatAdminRequiredError
 from telethon.tl.types import ChannelParticipantsAdmins
 
+from ..utils import is_admin
 from . import BOTLOG, BOTLOG_CHATID, LOGS, spamwatch
 from .sql_helper.gban_sql_helper import get_gbanuser, is_gbanned
-from ..utils import is_admin
 
 if Config.ANTISPAMBOT_BAN:
 
@@ -31,7 +31,7 @@ if Config.ANTISPAMBOT_BAN:
             except AttributeError:
                 return
         async for admin in event.client.iter_participants(
-                event.chat_id, filter=ChannelParticipantsAdmins
+            event.chat_id, filter=ChannelParticipantsAdmins
         ):
             if admin.id == adder:
                 ignore = True

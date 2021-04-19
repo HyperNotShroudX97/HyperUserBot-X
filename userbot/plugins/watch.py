@@ -24,9 +24,9 @@ def get_stream_data(query):
     movie = results["items"][0]
     stream_data["title"] = movie["title"]
     stream_data["movie_thumb"] = (
-            "https://images.justwatch.com"
-            + movie["poster"].replace("{profile}", "")
-            + "s592"
+        "https://images.justwatch.com"
+        + movie["poster"].replace("{profile}", "")
+        + "s592"
     )
     stream_data["release_year"] = movie["original_release_year"]
     try:

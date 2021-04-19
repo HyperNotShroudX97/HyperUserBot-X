@@ -381,7 +381,7 @@ async def list_drive_dir(service, file_id):
     while True:
         response = (
             service.files()
-                .list(
+            .list(
                 supportsTeamDrives=True,
                 includeTeamDriveItems=True,
                 q=query,
@@ -392,7 +392,7 @@ async def list_drive_dir(service, file_id):
                 corpora="allDrives",
                 orderBy="folder, name",
             )
-                .execute()
+            .execute()
         )
         files.extend(response.get("files", []))
         page_token = response.get("nextPageToken", None)
@@ -409,8 +409,8 @@ async def copy_file(service, file_id, dir_id):
         body["parents"] = [dir_id]
     drive_file = (
         service.files()
-            .copy(body=body, fileId=file_id, supportsTeamDrives=True)
-            .execute()
+        .copy(body=body, fileId=file_id, supportsTeamDrives=True)
+        .execute()
     )
     return drive_file["id"]
 
@@ -473,9 +473,9 @@ async def gdrive_download(event, gdrive, service, uri):
                 except AttributeError:
                     try:
                         error = (
-                                page.find("p", {"class": "uc-error-caption"}).text
-                                + "\n"
-                                + page.find("p", {"class": "uc-error-subcaption"}).text
+                            page.find("p", {"class": "uc-error-caption"}).text
+                            + "\n"
+                            + page.find("p", {"class": "uc-error-subcaption"}).text
                         )
                     except Exception:
                         reply += (
@@ -493,8 +493,8 @@ async def gdrive_download(event, gdrive, service, uri):
                 download = session.get(export, stream=True)
                 file_size = human_to_bytes(
                     page.find("span", {"class": "uc-name-size"})
-                        .text.split()[-1]
-                        .strip("()")
+                    .text.split()[-1]
+                    .strip("()")
                 )
             else:
                 file_size = int(download.headers["Content-Length"])
@@ -624,8 +624,8 @@ async def download_gdrive(gdrive, service, uri):
     try:
         file = (
             service.files()
-                .get(fileId=file_Id, fields="name, mimeType", supportsTeamDrives=True)
-                .execute()
+            .get(fileId=file_Id, fields="name, mimeType", supportsTeamDrives=True)
+            .execute()
         )
         if file["mimeType"] == "application/vnd.google-apps.folder":
             folder = await create_dir(service, file["name"])
@@ -657,8 +657,8 @@ async def change_permission(service, Id):
     except HttpError as e:
         """ it's not possible to change permission per file for teamdrive """
         if f'"File not found: {Id}."' in str(e) or (
-                '"Sharing folders that are inside a shared drive is not supported."'
-                in str(e)
+            '"Sharing folders that are inside a shared drive is not supported."'
+            in str(e)
         ):
             return
         else:
@@ -669,14 +669,14 @@ async def change_permission(service, Id):
 async def get_information(service, Id):
     return (
         service.files()
-            .get(
+        .get(
             fileId=Id,
             fields="name, id, size, mimeType, "
-                   "webViewLink, webContentLink,"
-                   "description",
+            "webViewLink, webContentLink,"
+            "description",
             supportsAllDrives=True,
         )
-            .execute()
+        .execute()
     )
 
 
@@ -700,8 +700,8 @@ async def create_dir(service, folder_name, dir_id=None):
         metadata["parents"] = [dir_id]
     folder = (
         service.files()
-            .create(body=metadata, fields="id, webViewLink", supportsAllDrives=True)
-            .execute()
+        .create(body=metadata, fields="id, webViewLink", supportsAllDrives=True)
+        .execute()
     )
     await change_permission(service, folder.get("id"))
     return folder
@@ -834,16 +834,16 @@ def get_file_path(service, file_id, file_name):
     while True:
         response = (
             service.files()
-                .get(fileId=file_id, fields="parents", supportsTeamDrives=True)
-                .execute()
+            .get(fileId=file_id, fields="parents", supportsTeamDrives=True)
+            .execute()
         )
         if not response:
             break
         file_id = response["parents"][0]
         response = (
             service.files()
-                .get(fileId=file_id, fields="name", supportsTeamDrives=True)
-                .execute()
+            .get(fileId=file_id, fields="name", supportsTeamDrives=True)
+            .execute()
         )
         tmp_path.append(response["name"])
     return "/".join(reversed(tmp_path[:-1]))
@@ -852,12 +852,12 @@ def get_file_path(service, file_id, file_name):
 async def get_output(service, file_id):
     file_ = (
         service.files()
-            .get(
+        .get(
             fileId=file_id,
             fields="id, name, size, mimeType",
             supportsTeamDrives=True,
         )
-            .execute()
+        .execute()
     )
     file_id = file_.get("id")
     file_name = file_.get("name")
@@ -932,7 +932,7 @@ async def lists(gdrive):
         try:
             response = (
                 service.files()
-                    .list(
+                .list(
                     supportsAllDrives=True,
                     includeTeamDriveItems=True,
                     q=query,
@@ -943,7 +943,7 @@ async def lists(gdrive):
                     orderBy="modifiedTime desc, folder",
                     pageToken=page_token,
                 )
-                    .execute()
+                .execute()
             )
         except HttpError as e:
             await edit_or_reply(
@@ -1049,7 +1049,7 @@ async def google_drive_managers(gdrive):
         page_token = None
         result = (
             service.files()
-                .list(
+            .list(
                 q=f'name="{name_or_id}"',
                 spaces="drive",
                 fields=(
@@ -1059,7 +1059,7 @@ async def google_drive_managers(gdrive):
                 supportsAllDrives=True,
                 pageToken=page_token,
             )
-                .execute()
+            .execute()
         )
         if exe == "mkdir":
             """
@@ -1585,40 +1585,40 @@ async def gshare(event):
 CMD_HELP.update(
     {
         "gdrive": "**Plugin :** `gdrive`"
-                  "\n\n  •  **Syntax : **`.gauth`"
-                  "\n  •  **Function : **generate token to enable all cmd google drive service."
-                  "\nThis only need to run once in life time."
-                  "\n\n  •  **Syntax : **`.greset`"
-                  "\n  •  **Function : **reset your token if something bad happened or change drive acc."
-                  "\n\n  •  **Syntax : **`.ugd`"
-                  "\n  •  **Function : **Upload file from local or uri/url/drivelink into google drive."
-                  "\nfor drivelink it's upload only if you want to."
-                  "\n\n  •  **Syntax : **`.gabort`"
-                  "\n  •  **Function : **Abort process uploading or downloading."
-                  "\n\n  •  **Syntax : **`.gdf mkdir`"
-                  "\n  •  **Function : **Create gdrive folder."
-                  "\n\n  •  **Syntax : **`.gdf chck`"
-                  "\n  •  **Function : **Check file/folder in gdrive."
-                  "\n\n  •  **Syntax : **`.gdf rm`"
-                  "\n  •  **Function : **Delete files/folders in gdrive."
-                  "\nCan't be undone, this method skipping file trash, so be caution..."
-                  "\n\n  •  **Syntax : **`.gdfset`"
-                  "\n  •  **Function : **Change upload directory in gdrive."
-                  "\ninto **G_DRIVE_FOLDER_ID** and if empty upload will go to root."
-                  "\n\n  •  **Syntax : **`.gdfclear`"
-                  "\n  •  **Function : **remove set parentId from cmd\n>`.gfset put` "
-                  "\n\n  •  **Syntax : **`.gdown <gdrive File-Link>`\
+        "\n\n  •  **Syntax : **`.gauth`"
+        "\n  •  **Function : **generate token to enable all cmd google drive service."
+        "\nThis only need to run once in life time."
+        "\n\n  •  **Syntax : **`.greset`"
+        "\n  •  **Function : **reset your token if something bad happened or change drive acc."
+        "\n\n  •  **Syntax : **`.ugd`"
+        "\n  •  **Function : **Upload file from local or uri/url/drivelink into google drive."
+        "\nfor drivelink it's upload only if you want to."
+        "\n\n  •  **Syntax : **`.gabort`"
+        "\n  •  **Function : **Abort process uploading or downloading."
+        "\n\n  •  **Syntax : **`.gdf mkdir`"
+        "\n  •  **Function : **Create gdrive folder."
+        "\n\n  •  **Syntax : **`.gdf chck`"
+        "\n  •  **Function : **Check file/folder in gdrive."
+        "\n\n  •  **Syntax : **`.gdf rm`"
+        "\n  •  **Function : **Delete files/folders in gdrive."
+        "\nCan't be undone, this method skipping file trash, so be caution..."
+        "\n\n  •  **Syntax : **`.gdfset`"
+        "\n  •  **Function : **Change upload directory in gdrive."
+        "\ninto **G_DRIVE_FOLDER_ID** and if empty upload will go to root."
+        "\n\n  •  **Syntax : **`.gdfclear`"
+        "\n  •  **Function : **remove set parentId from cmd\n>`.gfset put` "
+        "\n\n  •  **Syntax : **`.gdown <gdrive File-Link>`\
                             \n  •  **Function : **G-Drive File Downloader Plugin For Userbot. only gdrive files are supported now"
-                  "\nUse flag `-u` to directly upload to telegram in `.gdown` command"
-                  "\n\n  •  **Syntax : **`.glist`"
-                  "\n  •  **Function : **Get list of folders and files with default size 50."
-                  "\nUse flags `-l range[1-1000]` for limit output."
-                  "\nUse flags `-p parents-folder_id` for lists given folder in gdrive."
-                  "\n\n  •  **NOTE :**"
-                  "\nfor `.glist` you can combine -l and -p flags with or without name "
-                  "at the same time, it must be `-l` flags first before use `-p` flags.\n"
-                  "And by default it lists from latest 'modifiedTime' and then folders."
-                  "\n\n  •  **Syntax : **`.gshare your gdrive link`"
-                  "\n  •  **Function : **Get sharable link for team drive files need to set G_DRIVE_INDEX_LINK"
+        "\nUse flag `-u` to directly upload to telegram in `.gdown` command"
+        "\n\n  •  **Syntax : **`.glist`"
+        "\n  •  **Function : **Get list of folders and files with default size 50."
+        "\nUse flags `-l range[1-1000]` for limit output."
+        "\nUse flags `-p parents-folder_id` for lists given folder in gdrive."
+        "\n\n  •  **NOTE :**"
+        "\nfor `.glist` you can combine -l and -p flags with or without name "
+        "at the same time, it must be `-l` flags first before use `-p` flags.\n"
+        "And by default it lists from latest 'modifiedTime' and then folders."
+        "\n\n  •  **Syntax : **`.gshare your gdrive link`"
+        "\n  •  **Function : **Get sharable link for team drive files need to set G_DRIVE_INDEX_LINK"
     }
 )
