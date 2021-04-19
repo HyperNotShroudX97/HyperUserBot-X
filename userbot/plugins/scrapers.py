@@ -66,7 +66,7 @@ async def imdb(e):
         odds = soup.findAll("tr", "odd")
         mov_title = odds[0].findNext("td").findNext("td").text
         mov_link = (
-            "http://www.imdb.com/" + odds[0].findNext("td").findNext("td").a["href"]
+                "http://www.imdb.com/" + odds[0].findNext("td").findNext("td").a["href"]
         )
         page1 = requests.get(mov_link)
         soup = bs4.BeautifulSoup(page1.content, "lxml")
@@ -116,7 +116,7 @@ async def imdb(e):
             mov_rating = "Not available"
         await catevent.edit(
             "<a href=" + poster + ">&#8203;</a>"
-            "<b>Title : </b><code>"
+                                  "<b>Title : </b><code>"
             + mov_title
             + "</code>\n<code>"
             + mov_details

@@ -13,9 +13,9 @@ from .sql_helper.welcomesql import (
 async def _(event):
     cws = getcurrent_welcome_settings(event.chat_id)
     if (
-        cws
-        and (event.user_joined or event.user_added)
-        and not (await event.get_user()).bot
+            cws
+            and (event.user_joined or event.user_added)
+            and not (await event.get_user()).bot
     ):
         a_user = await event.get_user()
         chat = await event.get_chat()

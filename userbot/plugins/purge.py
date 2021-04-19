@@ -4,8 +4,8 @@ from asyncio import sleep
 
 from telethon.errors import rpcbaseerrors
 
-from ..utils import errors_handler
 from . import BOTLOG, BOTLOG_CHATID
+from ..utils import errors_handler
 
 purgelist = {}
 
@@ -25,10 +25,10 @@ async def fastpurger(event):
         if input_str and input_str.isnumeric():
             count += 1
             async for msg in event.client.iter_messages(
-                event.chat_id,
-                limit=(int(input_str) - 1),
-                offset_id=reply.id,
-                reverse=True,
+                    event.chat_id,
+                    limit=(int(input_str) - 1),
+                    offset_id=reply.id,
+                    reverse=True,
             ):
                 msgs.append(msg)
                 count += 1
@@ -42,7 +42,7 @@ async def fastpurger(event):
             )
         else:
             async for msg in event.client.iter_messages(
-                chat, min_id=event.reply_to_msg_id
+                    chat, min_id=event.reply_to_msg_id
             ):
                 msgs.append(msg)
                 count += 1
@@ -115,7 +115,7 @@ async def purge_to(event):
         msgs = []
         count = 0
         async for msg in event.client.iter_messages(
-            event.chat_id, min_id=(from_message - 1), max_id=(to_message + 1)
+                event.chat_id, min_id=(from_message - 1), max_id=(to_message + 1)
         ):
             msgs.append(msg)
             count += 1

@@ -8,7 +8,6 @@ from userbot.plugins.sql_helper.welcome_sql import (
     rm_welcome_setting,
     update_previous_welcome,
 )
-
 from . import BOTLOG_CHATID, LOGS
 
 
@@ -16,9 +15,9 @@ from . import BOTLOG_CHATID, LOGS
 async def _(event):
     cws = get_current_welcome_settings(event.chat_id)
     if (
-        cws
-        and (event.user_joined or event.user_added)
-        and not (await event.get_user()).bot
+            cws
+            and (event.user_joined or event.user_added)
+            and not (await event.get_user()).bot
     ):
         if Config.CLEAN_WELCOME:
             try:

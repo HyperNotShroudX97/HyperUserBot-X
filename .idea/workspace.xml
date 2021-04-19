@@ -1,7 +1,114 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9e7ca13d-b9fd-4587-91b2-e88d09bc3bbf" name="Default Changelist" comment="" />
+    <list default="true" id="9e7ca13d-b9fd-4587-91b2-e88d09bc3bbf" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/megadown" beforeDir="false" afterPath="$PROJECT_DIR$/bin/megadown" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userbot/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/userbot/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userbot/__main__.py" beforeDir="false" afterPath="$PROJECT_DIR$/userbot/__main__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userbot/helpers/functions.py" beforeDir="false" afterPath="$PROJECT_DIR$/userbot/helpers/functions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userbot/helpers/google_image_download.py" beforeDir="false" afterPath="$PROJECT_DIR$/userbot/helpers/google_image_download.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userbot/helpers/memeifyhelpers.py" beforeDir="false" afterPath="$PROJECT_DIR$/userbot/helpers/memeifyhelpers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userbot/helpers/progress.py" beforeDir="false" afterPath="$PROJECT_DIR$/userbot/helpers/progress.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userbot/helpers/qhelper.py" beforeDir="false" afterPath="$PROJECT_DIR$/userbot/helpers/qhelper.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userbot/helpers/utils/format.py" beforeDir="false" afterPath="$PROJECT_DIR$/userbot/helpers/utils/format.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userbot/helpers/utils/tools.py" beforeDir="false" afterPath="$PROJECT_DIR$/userbot/helpers/utils/tools.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userbot/managers/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/userbot/managers/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userbot/plugins/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/userbot/plugins/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userbot/plugins/_inlinebot.py" beforeDir="false" afterPath="$PROJECT_DIR$/userbot/plugins/_inlinebot.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userbot/plugins/_inlineub.py" beforeDir="false" afterPath="$PROJECT_DIR$/userbot/plugins/_inlineub.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userbot/plugins/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/userbot/plugins/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userbot/plugins/afk.py" beforeDir="false" afterPath="$PROJECT_DIR$/userbot/plugins/afk.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userbot/plugins/alive.py" beforeDir="false" afterPath="$PROJECT_DIR$/userbot/plugins/alive.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userbot/plugins/android.py" beforeDir="false" afterPath="$PROJECT_DIR$/userbot/plugins/android.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userbot/plugins/anilist.py" beforeDir="false" afterPath="$PROJECT_DIR$/userbot/plugins/anilist.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userbot/plugins/animation1.py" beforeDir="false" afterPath="$PROJECT_DIR$/userbot/plugins/animation1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userbot/plugins/animation3.py" beforeDir="false" afterPath="$PROJECT_DIR$/userbot/plugins/animation3.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userbot/plugins/animation4.py" beforeDir="false" afterPath="$PROJECT_DIR$/userbot/plugins/animation4.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userbot/plugins/antiflood.py" beforeDir="false" afterPath="$PROJECT_DIR$/userbot/plugins/antiflood.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userbot/plugins/antispambot.py" beforeDir="false" afterPath="$PROJECT_DIR$/userbot/plugins/antispambot.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userbot/plugins/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/userbot/plugins/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userbot/plugins/autoprofile.py" beforeDir="false" afterPath="$PROJECT_DIR$/userbot/plugins/autoprofile.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userbot/plugins/blacklist.py" beforeDir="false" afterPath="$PROJECT_DIR$/userbot/plugins/blacklist.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userbot/plugins/broadcast.py" beforeDir="false" afterPath="$PROJECT_DIR$/userbot/plugins/broadcast.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userbot/plugins/button.py" beforeDir="false" afterPath="$PROJECT_DIR$/userbot/plugins/button.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userbot/plugins/climate.py" beforeDir="false" afterPath="$PROJECT_DIR$/userbot/plugins/climate.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userbot/plugins/corecmds.py" beforeDir="false" afterPath="$PROJECT_DIR$/userbot/plugins/corecmds.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userbot/plugins/dictionary.py" beforeDir="false" afterPath="$PROJECT_DIR$/userbot/plugins/dictionary.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userbot/plugins/direct_links.py" beforeDir="false" afterPath="$PROJECT_DIR$/userbot/plugins/direct_links.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userbot/plugins/echo.py" beforeDir="false" afterPath="$PROJECT_DIR$/userbot/plugins/echo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userbot/plugins/emojigames.py" beforeDir="false" afterPath="$PROJECT_DIR$/userbot/plugins/emojigames.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userbot/plugins/evaluators.py" beforeDir="false" afterPath="$PROJECT_DIR$/userbot/plugins/evaluators.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userbot/plugins/externalplugins.py" beforeDir="false" afterPath="$PROJECT_DIR$/userbot/plugins/externalplugins.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userbot/plugins/ezanvakti.py" beforeDir="false" afterPath="$PROJECT_DIR$/userbot/plugins/ezanvakti.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userbot/plugins/ffmpeg.py" beforeDir="false" afterPath="$PROJECT_DIR$/userbot/plugins/ffmpeg.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userbot/plugins/fileconverts.py" beforeDir="false" afterPath="$PROJECT_DIR$/userbot/plugins/fileconverts.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userbot/plugins/filemanager.py" beforeDir="false" afterPath="$PROJECT_DIR$/userbot/plugins/filemanager.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userbot/plugins/filesummary.py" beforeDir="false" afterPath="$PROJECT_DIR$/userbot/plugins/filesummary.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userbot/plugins/filters.py" beforeDir="false" afterPath="$PROJECT_DIR$/userbot/plugins/filters.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userbot/plugins/fryer.py" beforeDir="false" afterPath="$PROJECT_DIR$/userbot/plugins/fryer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userbot/plugins/funarts.py" beforeDir="false" afterPath="$PROJECT_DIR$/userbot/plugins/funarts.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userbot/plugins/funnyfonts.py" beforeDir="false" afterPath="$PROJECT_DIR$/userbot/plugins/funnyfonts.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userbot/plugins/gadmin.py" beforeDir="false" afterPath="$PROJECT_DIR$/userbot/plugins/gadmin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userbot/plugins/gdrive.py" beforeDir="false" afterPath="$PROJECT_DIR$/userbot/plugins/gdrive.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userbot/plugins/glitch.py" beforeDir="false" afterPath="$PROJECT_DIR$/userbot/plugins/glitch.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userbot/plugins/google.py" beforeDir="false" afterPath="$PROJECT_DIR$/userbot/plugins/google.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userbot/plugins/greetings.py" beforeDir="false" afterPath="$PROJECT_DIR$/userbot/plugins/greetings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userbot/plugins/groupactions.py" beforeDir="false" afterPath="$PROJECT_DIR$/userbot/plugins/groupactions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userbot/plugins/groupdata.py" beforeDir="false" afterPath="$PROJECT_DIR$/userbot/plugins/groupdata.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userbot/plugins/hash.py" beforeDir="false" afterPath="$PROJECT_DIR$/userbot/plugins/hash.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userbot/plugins/help.py" beforeDir="false" afterPath="$PROJECT_DIR$/userbot/plugins/help.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userbot/plugins/heroku.py" beforeDir="false" afterPath="$PROJECT_DIR$/userbot/plugins/heroku.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userbot/plugins/imposter.py" beforeDir="false" afterPath="$PROJECT_DIR$/userbot/plugins/imposter.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userbot/plugins/lastfm.py" beforeDir="false" afterPath="$PROJECT_DIR$/userbot/plugins/lastfm.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userbot/plugins/letmesearch.py" beforeDir="false" afterPath="$PROJECT_DIR$/userbot/plugins/letmesearch.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userbot/plugins/locks.py" beforeDir="false" afterPath="$PROJECT_DIR$/userbot/plugins/locks.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userbot/plugins/logchats.py" beforeDir="false" afterPath="$PROJECT_DIR$/userbot/plugins/logchats.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userbot/plugins/markdown.py" beforeDir="false" afterPath="$PROJECT_DIR$/userbot/plugins/markdown.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userbot/plugins/mashup.py" beforeDir="false" afterPath="$PROJECT_DIR$/userbot/plugins/mashup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userbot/plugins/mediainfo.py" beforeDir="false" afterPath="$PROJECT_DIR$/userbot/plugins/mediainfo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userbot/plugins/mega.py" beforeDir="false" afterPath="$PROJECT_DIR$/userbot/plugins/mega.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userbot/plugins/memes.py" beforeDir="false" afterPath="$PROJECT_DIR$/userbot/plugins/memes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userbot/plugins/memestext.py" beforeDir="false" afterPath="$PROJECT_DIR$/userbot/plugins/memestext.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userbot/plugins/mention.py" beforeDir="false" afterPath="$PROJECT_DIR$/userbot/plugins/mention.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userbot/plugins/nsfwdetect.py" beforeDir="false" afterPath="$PROJECT_DIR$/userbot/plugins/nsfwdetect.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userbot/plugins/ocr.py" beforeDir="false" afterPath="$PROJECT_DIR$/userbot/plugins/ocr.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userbot/plugins/pastebin.py" beforeDir="false" afterPath="$PROJECT_DIR$/userbot/plugins/pastebin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userbot/plugins/pmpermit.py" beforeDir="false" afterPath="$PROJECT_DIR$/userbot/plugins/pmpermit.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userbot/plugins/pmpermit_menu.py" beforeDir="false" afterPath="$PROJECT_DIR$/userbot/plugins/pmpermit_menu.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userbot/plugins/powertools.py" beforeDir="false" afterPath="$PROJECT_DIR$/userbot/plugins/powertools.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userbot/plugins/privatewelcome.py" beforeDir="false" afterPath="$PROJECT_DIR$/userbot/plugins/privatewelcome.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userbot/plugins/purge.py" beforeDir="false" afterPath="$PROJECT_DIR$/userbot/plugins/purge.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userbot/plugins/quotly.py" beforeDir="false" afterPath="$PROJECT_DIR$/userbot/plugins/quotly.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userbot/plugins/randomsticker.py" beforeDir="false" afterPath="$PROJECT_DIR$/userbot/plugins/randomsticker.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userbot/plugins/sangmata.py" beforeDir="false" afterPath="$PROJECT_DIR$/userbot/plugins/sangmata.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userbot/plugins/scrapers.py" beforeDir="false" afterPath="$PROJECT_DIR$/userbot/plugins/scrapers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userbot/plugins/screenshot.py" beforeDir="false" afterPath="$PROJECT_DIR$/userbot/plugins/screenshot.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userbot/plugins/sed.py" beforeDir="false" afterPath="$PROJECT_DIR$/userbot/plugins/sed.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userbot/plugins/selfdestruct.py" beforeDir="false" afterPath="$PROJECT_DIR$/userbot/plugins/selfdestruct.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userbot/plugins/songs.py" beforeDir="false" afterPath="$PROJECT_DIR$/userbot/plugins/songs.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userbot/plugins/speedtest.py" beforeDir="false" afterPath="$PROJECT_DIR$/userbot/plugins/speedtest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userbot/plugins/sql_helper/blacklist_sql.py" beforeDir="false" afterPath="$PROJECT_DIR$/userbot/plugins/sql_helper/blacklist_sql.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userbot/plugins/sql_helper/broadcast_sql.py" beforeDir="false" afterPath="$PROJECT_DIR$/userbot/plugins/sql_helper/broadcast_sql.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userbot/plugins/sql_helper/globals.py" beforeDir="false" afterPath="$PROJECT_DIR$/userbot/plugins/sql_helper/globals.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userbot/plugins/stats.py" beforeDir="false" afterPath="$PROJECT_DIR$/userbot/plugins/stats.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userbot/plugins/stickerfun.py" beforeDir="false" afterPath="$PROJECT_DIR$/userbot/plugins/stickerfun.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userbot/plugins/stickers.py" beforeDir="false" afterPath="$PROJECT_DIR$/userbot/plugins/stickers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userbot/plugins/stt.py" beforeDir="false" afterPath="$PROJECT_DIR$/userbot/plugins/stt.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userbot/plugins/sysdetails.py" beforeDir="false" afterPath="$PROJECT_DIR$/userbot/plugins/sysdetails.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userbot/plugins/tadmin.py" beforeDir="false" afterPath="$PROJECT_DIR$/userbot/plugins/tadmin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userbot/plugins/telegraph.py" beforeDir="false" afterPath="$PROJECT_DIR$/userbot/plugins/telegraph.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userbot/plugins/thumbnail.py" beforeDir="false" afterPath="$PROJECT_DIR$/userbot/plugins/thumbnail.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userbot/plugins/tools.py" beforeDir="false" afterPath="$PROJECT_DIR$/userbot/plugins/tools.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userbot/plugins/translate.py" beforeDir="false" afterPath="$PROJECT_DIR$/userbot/plugins/translate.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userbot/plugins/updater.py" beforeDir="false" afterPath="$PROJECT_DIR$/userbot/plugins/updater.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userbot/plugins/upload.py" beforeDir="false" afterPath="$PROJECT_DIR$/userbot/plugins/upload.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userbot/plugins/watch.py" beforeDir="false" afterPath="$PROJECT_DIR$/userbot/plugins/watch.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userbot/plugins/webupload.py" beforeDir="false" afterPath="$PROJECT_DIR$/userbot/plugins/webupload.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userbot/plugins/welcome.py" beforeDir="false" afterPath="$PROJECT_DIR$/userbot/plugins/welcome.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userbot/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/userbot/utils.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -9,6 +116,15 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="ProjectId" id="1rPLd3odue2x7MEt1tnJSmodLdg" />
   <component name="ProjectViewState">
@@ -29,10 +145,22 @@
       <option name="presentableId" value="Default" />
       <updated>1618872862215</updated>
       <workItem from="1618872864231" duration="245000" />
+      <workItem from="1618873429944" duration="1007000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

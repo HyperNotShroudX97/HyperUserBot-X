@@ -241,8 +241,8 @@ async def timer_blankx(e):
         return
     e = await edit_or_reply(e, "charging")
     txt = (
-        e.text[10:]
-        + "\n\n`Tesla Wireless Charging (beta) Started...\nDevice Detected: Nokia 1100\nBattery Percentage:` "
+            e.text[10:]
+            + "\n\n`Tesla Wireless Charging (beta) Started...\nDevice Detected: Nokia 1100\nBattery Percentage:` "
     )
     j = 10
     k = j

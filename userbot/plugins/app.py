@@ -30,36 +30,36 @@ async def apk(event):
         )
         app_dev = results[0].findNext("div", "Vpfmgd").findNext("div", "KoLSrc").text
         app_dev_link = (
-            "https://play.google.com"
-            + results[0].findNext("div", "Vpfmgd").findNext("a", "mnKHRc")["href"]
+                "https://play.google.com"
+                + results[0].findNext("div", "Vpfmgd").findNext("a", "mnKHRc")["href"]
         )
         app_rating = (
             results[0]
-            .findNext("div", "Vpfmgd")
-            .findNext("div", "pf5lIe")
-            .find("div")["aria-label"]
+                .findNext("div", "Vpfmgd")
+                .findNext("div", "pf5lIe")
+                .find("div")["aria-label"]
         )
         app_link = (
-            "https://play.google.com"
-            + results[0]
-            .findNext("div", "Vpfmgd")
-            .findNext("div", "vU6FJ p63iDd")
-            .a["href"]
+                "https://play.google.com"
+                + results[0]
+                .findNext("div", "Vpfmgd")
+                .findNext("div", "vU6FJ p63iDd")
+                .a["href"]
         )
         app_icon = (
             results[0]
-            .findNext("div", "Vpfmgd")
-            .findNext("div", "uzcko")
-            .img["data-src"]
+                .findNext("div", "Vpfmgd")
+                .findNext("div", "uzcko")
+                .img["data-src"]
         )
         app_details = "<a href='" + app_icon + "'>📲&#8203;</a>"
         app_details += " <b>" + app_name + "</b>"
         app_details += (
-            "\n\n<code>Developer :</code> <a href='"
-            + app_dev_link
-            + "'>"
-            + app_dev
-            + "</a>"
+                "\n\n<code>Developer :</code> <a href='"
+                + app_dev_link
+                + "'>"
+                + app_dev
+                + "</a>"
         )
         app_details += "\n<code>Rating :</code> " + app_rating.replace(
             "Rated ", "⭐ "
@@ -69,9 +69,9 @@ async def apk(event):
             "five", "5"
         )
         app_details += (
-            "\n<code>Features :</code> <a href='"
-            + app_link
-            + "'>View in Play Store</a>"
+                "\n<code>Features :</code> <a href='"
+                + app_link
+                + "'>View in Play Store</a>"
         )
         app_details += f"\n\n===> {DEFAULTUSER} <==="
         await event.edit(app_details, link_preview=True, parse_mode="HTML")
@@ -100,36 +100,36 @@ async def apkr(event):
         )
         app_dev = results[0].findNext("div", "Vpfmgd").findNext("div", "KoLSrc").text
         app_dev_link = (
-            "https://play.google.com"
-            + results[0].findNext("div", "Vpfmgd").findNext("a", "mnKHRc")["href"]
+                "https://play.google.com"
+                + results[0].findNext("div", "Vpfmgd").findNext("a", "mnKHRc")["href"]
         )
         app_rating = (
             results[0]
-            .findNext("div", "Vpfmgd")
-            .findNext("div", "pf5lIe")
-            .find("div")["aria-label"]
+                .findNext("div", "Vpfmgd")
+                .findNext("div", "pf5lIe")
+                .find("div")["aria-label"]
         )
         app_link = (
-            "https://play.google.com"
-            + results[0]
-            .findNext("div", "Vpfmgd")
-            .findNext("div", "vU6FJ p63iDd")
-            .a["href"]
+                "https://play.google.com"
+                + results[0]
+                .findNext("div", "Vpfmgd")
+                .findNext("div", "vU6FJ p63iDd")
+                .a["href"]
         )
         app_icon = (
             results[0]
-            .findNext("div", "Vpfmgd")
-            .findNext("div", "uzcko")
-            .img["data-src"]
+                .findNext("div", "Vpfmgd")
+                .findNext("div", "uzcko")
+                .img["data-src"]
         )
         app_details = "<a href='" + app_icon + "'>📲&#8203;</a>"
         app_details += " <b>" + app_name + "</b>"
         app_details += (
-            "\n\n<code>Developer :</code> <a href='"
-            + app_dev_link
-            + "'>"
-            + app_dev
-            + "</a>"
+                "\n\n<code>Developer :</code> <a href='"
+                + app_dev_link
+                + "'>"
+                + app_dev
+                + "</a>"
         )
         app_details += "\n<code>Rating :</code> " + app_rating.replace(
             "Rated ", "⭐ "
@@ -139,9 +139,9 @@ async def apkr(event):
             "five", "5"
         )
         app_details += (
-            "\n<code>Features :</code> <a href='"
-            + app_link
-            + "'>View in Play Store</a>"
+                "\n<code>Features :</code> <a href='"
+                + app_link
+                + "'>View in Play Store</a>"
         )
         app_details += "\n\n<b>Download : </b> <a href='https://t.me/joinchat/JCu-H1NikiYDgNjpjPYd4A'>Request_Here</a>"
         app_details += "\n\n===> @Xpl0iter <==="

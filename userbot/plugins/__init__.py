@@ -1,18 +1,10 @@
-import math
-import os
-import re
-import time
-
-import heroku3
 import lottie
-import requests
 import spamwatch as spam_watch
-from validators.url import url
 
 from .. import *
 from ..Config import Config
 from ..helpers import *
-from ..helpers import _cattools, _catutils, _format
+from ..helpers import _catutils
 
 # =================== CONSTANT ===================
 
@@ -25,7 +17,6 @@ BOT_USERNAME = Config.TG_BOT_USERNAME
 # mention user
 mention = f"[{DEFAULTUSER}](tg://user?id={USERID})"
 hmention = f"<a href = tg://user?id={USERID}>{DEFAULTUSER}</a>"
-
 
 Heroku = heroku3.from_key(Config.HEROKU_API_KEY)
 heroku_api = "https://api.heroku.com"
@@ -64,12 +55,10 @@ if Config.SUDO_USERS:
     for user in Config.SUDO_USERS:
         cat_users.append(user)
 
-
 # ================================================
 
 if not os.path.isdir(Config.TMP_DOWNLOAD_DIRECTORY):
     os.makedirs(Config.TMP_DOWNLOAD_DIRECTORY)
-
 
 # thumb image
 if Config.THUMB_IMAGE is not None:

@@ -8,8 +8,8 @@ from random import choice
 
 import PIL.ImageOps
 import requests
-from emoji import get_emoji_regexp
 from PIL import Image, ImageDraw, ImageFont
+from emoji import get_emoji_regexp
 from telethon.tl.types import Channel, PollAnswer
 from validators.url import url
 from youtubesearchpython import VideosSearch
@@ -55,9 +55,9 @@ async def admin_groups(cat):
     async for dialog in cat.client.iter_dialogs():
         entity = dialog.entity
         if (
-            isinstance(entity, Channel)
-            and entity.megagroup
-            and (entity.creator or entity.admin_rights)
+                isinstance(entity, Channel)
+                and entity.megagroup
+                and (entity.creator or entity.admin_rights)
         ):
             catgroups.append(entity.id)
     return catgroups

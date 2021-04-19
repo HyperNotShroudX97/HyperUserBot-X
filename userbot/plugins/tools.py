@@ -8,9 +8,9 @@ from urllib.parse import quote
 import barcode
 import qrcode
 import requests
+from PIL import Image, ImageColor
 from barcode.writer import ImageWriter
 from bs4 import BeautifulSoup
-from PIL import Image, ImageColor
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 
 

@@ -45,9 +45,9 @@ async def _(event):
     except Exception:
         return await edit_or_reply(
             event,
-            f"{_format.mentionuser(user.first_name ,user.id)} `is not admin of this this {event.chat.title} chat`",
+            f"{_format.mentionuser(user.first_name, user.id)} `is not admin of this this {event.chat.title} chat`",
         )
-    output = f"**Admin rights of **{_format.mentionuser(user.first_name ,user.id)} **in {event.chat.title} chat are **\n"
+    output = f"**Admin rights of **{_format.mentionuser(user.first_name, user.id)} **in {event.chat.title} chat are **\n"
     output += f"__Change info :__ {c_info}\n"
     output += f"__Delete messages :__ {del_me}\n"
     output += f"__Ban users :__ {ban}\n"
@@ -85,7 +85,7 @@ async def _(event):
             return
     try:
         async for x in event.client.iter_participants(
-            chat, filter=ChannelParticipantsAdmins
+                chat, filter=ChannelParticipantsAdmins
         ):
             if not x.deleted and isinstance(x.participant, ChannelParticipantCreator):
                 mentions += "\n 👑 [{}](tg://user?id={}) `{}`".format(
@@ -93,7 +93,7 @@ async def _(event):
                 )
         mentions += "\n"
         async for x in event.client.iter_participants(
-            chat, filter=ChannelParticipantsAdmins
+                chat, filter=ChannelParticipantsAdmins
         ):
             if x.deleted:
                 mentions += "\n `{}`".format(x.id)
@@ -131,7 +131,7 @@ async def _(event):
             return None
     try:
         async for x in event.client.iter_participants(
-            chat, filter=ChannelParticipantsBots
+                chat, filter=ChannelParticipantsBots
         ):
             if isinstance(x.participant, ChannelParticipantAdmin):
                 mentions += "\n ⚜️ [{}](tg://user?id={}) `{}`".format(
@@ -304,8 +304,8 @@ async def fetch_info(chat, event):
     former_title = (
         msg_info.messages[0].action.title
         if first_msg_valid
-        and isinstance(msg_info.messages[0].action, MessageActionChannelMigrateFrom)
-        and msg_info.messages[0].action.title != chat_title
+           and isinstance(msg_info.messages[0].action, MessageActionChannelMigrateFrom)
+           and msg_info.messages[0].action.title != chat_title
         else None
     )
     try:
@@ -451,8 +451,8 @@ async def fetch_info(chat, event):
     if not broadcast:
         caption += f"Slow mode: {slowmode}"
         if (
-            hasattr(chat_obj_info, "slowmode_enabled")
-            and chat_obj_info.slowmode_enabled
+                hasattr(chat_obj_info, "slowmode_enabled")
+                and chat_obj_info.slowmode_enabled
         ):
             caption += f", <code>{slowmode_time}s</code>\n\n"
         else:

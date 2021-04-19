@@ -13,6 +13,7 @@ from telethon.tl.types import InputMessagesFilterDocument
 
 from . import deEmojify, waifutxt
 
+
 # RegEx by https://t.me/c/1220993104/500653 ( @SnapDragon7410 )
 
 

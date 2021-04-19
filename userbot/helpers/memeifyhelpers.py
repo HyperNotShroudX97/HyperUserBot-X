@@ -3,8 +3,8 @@ from os.path import join
 from textwrap import wrap
 
 import numpy as np
-from colour import Color as asciiColor
 from PIL import Image, ImageDraw, ImageFont
+from colour import Color as asciiColor
 from wand.color import Color
 from wand.drawing import Drawing
 from wand.image import Image as catimage

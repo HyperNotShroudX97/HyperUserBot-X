@@ -22,8 +22,8 @@ async def _(event):
         )
         lan = input_str
         if (
-            Config.IBM_WATSON_CRED_URL is None
-            or Config.IBM_WATSON_CRED_PASSWORD is None
+                Config.IBM_WATSON_CRED_URL is None
+                or Config.IBM_WATSON_CRED_PASSWORD is None
         ):
             await catevent.edit(
                 "You need to set the required ENV variables for this module. \nModule stopping"
@@ -50,7 +50,7 @@ async def _(event):
                     alternatives = alternative["alternatives"][0]
                     transcript_response += " " + str(alternatives["transcript"]) + " + "
                     transcript_confidence += (
-                        " " + str(alternatives["confidence"]) + " + "
+                            " " + str(alternatives["confidence"]) + " + "
                     )
                 end = datetime.now()
                 ms = (end - start).seconds
