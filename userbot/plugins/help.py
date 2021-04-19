@@ -18,9 +18,7 @@ async def cmd_list(event):
     reply_to_id = await reply_id(event)
     input_str = event.pattern_match.group(1)
     if input_str == "text":
-        string = (
-            "Total {count} commands found in {plugincount} plugins of HyperUserBot-X\n\n"
-        )
+        string = "Total {count} commands found in {plugincount} plugins of HyperUserBot-X\n\n"
         catcount = 0
         plugincount = 0
         for i in sorted(CMD_LIST):
@@ -42,7 +40,9 @@ async def cmd_list(event):
                 .get("key")
             )
             url = f"https://nekobin.com/{key}"
-            reply_text = f"**All commands of the HyperUserBot-X can be seen [here]({url})**"
+            reply_text = (
+                f"**All commands of the HyperUserBot-X can be seen [here]({url})**"
+            )
             await event.edit(reply_text)
             return
         await event.edit(string.format(count=catcount, plugincount=plugincount))
