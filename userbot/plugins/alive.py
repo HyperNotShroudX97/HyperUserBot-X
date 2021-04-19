@@ -3,12 +3,12 @@ from platform import python_version
 
 from telethon import version
 
-from . import ALIVE_NAME, StartTime, HyperBot, get_readable_time, mention, reply_id
+from . import ALIVE_NAME, HyperBot, StartTime, get_readable_time, mention, reply_id
 
 DEFAULTUSER = ALIVE_NAME or "cat"
 CAT_IMG = Config.ALIVE_PIC
 CUSTOM_ALIVE_TEXT = (
-        Config.CUSTOM_ALIVE_TEXT or "✾ HyperUserBot-X IS RUNNING SUCCESSFULLY ✾"
+    Config.CUSTOM_ALIVE_TEXT or "✾ HyperUserBot-X IS RUNNING SUCCESSFULLY ✾"
 )
 EMOJI = Config.CUSTOM_ALIVE_EMOJI or "  ✥ "
 
