@@ -3,7 +3,7 @@ from platform import python_version
 
 from telethon import version
 
-from . import ALIVE_NAME, StartTime, catversion, get_readable_time, mention, reply_id
+from . import ALIVE_NAME, StartTime, HyperVersion, get_readable_time, mention, reply_id
 
 DEFAULTUSER = ALIVE_NAME or "cat"
 CAT_IMG = Config.ALIVE_PIC
@@ -25,7 +25,7 @@ async def amireallyalive(alive):
         cat_caption = f"**{CUSTOM_ALIVE_TEXT}**\n\n"
         cat_caption += f"**{EMOJI} Database :** `{check_sgnirts}`\n"
         cat_caption += f"**{EMOJI} TL Version :** `{version.__version__}\n`"
-        cat_caption += f"**{EMOJI} HyperUserBot-X Version :** `{catversion}`\n"
+        cat_caption += f"**{EMOJI} HyperUserBot-X Version :** `{HyperVersion}`\n"
         cat_caption += f"**{EMOJI} Py Version :** `{python_version()}\n`"
         cat_caption += f"**{EMOJI} ZINDA :** `{uptime}\n`"
         cat_caption += f"**{EMOJI} Mere Saar:** {mention}\n"
@@ -39,7 +39,7 @@ async def amireallyalive(alive):
             f"**{CUSTOM_ALIVE_TEXT}**\n\n"
             f"**{EMOJI} Database :** `{check_sgnirts}`\n"
             f"**{EMOJI} TL version :** `{version.__version__}\n`"
-            f"**{EMOJI} HyperUserBot-X Version :** `{catversion}`\n"
+            f"**{EMOJI} HyperUserBot-X Version :** `{HyperVersion}`\n"
             f"**{EMOJI} Py Version :** `{python_version()}\n`"
             f"**{EMOJI} ZINDA :** `{uptime}\n`"
             f"**{EMOJI} Mere Saar:** {mention}\n",
@@ -55,7 +55,7 @@ async def amireallyalive(alive):
     reply_to_id = await reply_id(alive)
     cat_caption = f"**✾ HyperUserBot-X IS RUNNING SUCCESSFULLY ✾**\n"
     cat_caption += f"**  -TL Version :** `{version.__version__}\n`"
-    cat_caption += f"**  -HyperUserBot-X Version :** `{catversion}`\n"
+    cat_caption += f"**  -HyperUserBot-X Version :** `{HyperVersion}`\n"
     cat_caption += f"**  -Py Version :** `{python_version()}\n`"
     cat_caption += f"**  -Mere Saar:** {mention}\n"
     results = await bot.inline_query(tgbotusername, cat_caption)  # pylint:disable=E0602
